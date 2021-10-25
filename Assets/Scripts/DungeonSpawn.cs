@@ -10,9 +10,12 @@ public class DungeonSpawn : MonoBehaviour
     int roomsX;
     int roomsY;
     [SerializeField] int neighlimit;
+    int bossX = 0;
+    int bossY = 0;
+    int maxdistance = 0;
     void Start()
     {
-        SpawnDungeon2();
+        SpawnDungeon();
     }
 
     void Update()
@@ -20,30 +23,8 @@ public class DungeonSpawn : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             DestroyDungeon();
-            SpawnDungeon2();
+            SpawnDungeon();
         }
-    }
-
-    void SpawnDungeon()
-    {
-        roomsX = Random.Range(2, 6);
-        roomsY = Random.Range(2, 6);
-        Debug.Log("Wylosowane numery to: X- " + roomsX + "  Y- " + roomsY);
-        Rooms = new GameObject[roomsX, roomsY];
-
-        for (int i = 0; i < roomsX; i++)
-        {
-            for (int j = 0; j < roomsY; j++)
-            {
-                Debug.Log(i.ToString() + " , " + j.ToString());
-                GameObject SpawnedRoom = Instantiate(Room, new Vector3(gameObject.transform.position.x + i * 3, gameObject.transform.position.y + j * 3, gameObject.transform.position.z), Quaternion.identity);
-                Rooms[i, j] = SpawnedRoom;
-            }
-        }
-        int randomX = Random.Range(0, roomsX);
-        int randomY = Random.Range(0, roomsY);
-        Debug.Log("x: " + randomX + "\ny: " + randomY);
-     //   Rooms[randomX, randomY].GetComponent<SpriteRenderer>().color = Color.red;
     }
 
     void DestroyDungeon()
@@ -56,13 +37,14 @@ public class DungeonSpawn : MonoBehaviour
     }
 
 
-    void SpawnDungeon2()
+    void SpawnDungeon()
     {
         #region initstats
+        maxdistance = 0;
         int randomX = Random.Range(4, 8);
         int randomY = Random.Range(4, 8);
-        int MaxnumberOfRooms = Random.Range((randomX + randomY) / 2, randomX + randomY);
-        Debug.Log("X: " + randomX + " Y: " + randomY + " Rooms: " + MaxnumberOfRooms); 
+        int MaxnumberOfRooms = Random.Range((randomX * randomY) / 2 - (randomX+randomY)/2, randomX + randomY+2);
+      //  Debug.Log("X: " + randomX + " Y: " + randomY + " Rooms: " + MaxnumberOfRooms); 
         int numberOfRooms = 1;
         Rooms = new GameObject[randomX, randomY];
         #endregion
@@ -85,9 +67,10 @@ public class DungeonSpawn : MonoBehaviour
         #region spawn set
         int spawnX = Random.Range(0, randomX);
         int spawnY = Random.Range(0, randomY);
-        Debug.Log("spawnX: " + spawnX + " spawnY:" + spawnY);
+       // Debug.Log("spawnX: " + spawnX + " spawnY:" + spawnY);
         Rooms[spawnX, spawnY].GetComponent<Room>().roomType = global::Room.RoomType.Spawn;
         Rooms[spawnX, spawnY].GetComponent<Room>().roomActiveness = global::Room.RoomActiveness.Filled;
+        Rooms[spawnX, spawnY].GetComponent<Room>().distancetospawn = 0;
         #endregion
         //--------------------------------------------------------
 
@@ -130,7 +113,7 @@ public class DungeonSpawn : MonoBehaviour
                 }
             }
             int randomnewroom = Random.Range(1, readyrooms);
-            Debug.Log("ready: " + readyrooms + " random: " + randomnewroom);
+         //   Debug.Log("ready: " + readyrooms + " random: " + randomnewroom);
             foreach (GameObject room in Rooms)
             {
                 if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Ready)
@@ -181,9 +164,43 @@ public class DungeonSpawn : MonoBehaviour
         #endregion
         //------------------------------------------
 
-        //Losowanie pokoju bossa
+        //Sprawdzanie s¹siadów
+        #region neighbours
+        foreach (GameObject room in Rooms)
+        {
+            //room.GetComponent<Room>().CreateRoom();
+            if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+            {
+                int x = room.GetComponent<Room>().Xpos;
+                int y = room.GetComponent<Room>().Ypos;
+                if ((x - 1) >= 0 && Rooms[x - 1, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+                {
+                    room.GetComponent<Room>().neighbournumbers += 1;
+                    room.GetComponent<Room>().left = true;
+                }
+                if ((x + 1) < randomX && Rooms[x + 1, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+                {
+                    room.GetComponent<Room>().neighbournumbers += 1;
+                    room.GetComponent<Room>().right = true;
+                }
+                if ((y - 1) >= 0 && Rooms[x, y - 1].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+                {
+                    room.GetComponent<Room>().neighbournumbers += 1;
+                    room.GetComponent<Room>().down = true;
+                }
+                if ((y + 1) < randomY && Rooms[x, y + 1].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+                {
+                    room.GetComponent<Room>().neighbournumbers += 1;
+                    room.GetComponent<Room>().top = true;
+                }
+            }
+        }
+        #endregion
+        //----------------------------------------------------
+
+        //Losowanie pokoju bossa v1 - pitagoras
         #region bossgen
-        int furthestdistance = 0;
+        /* int furthestdistance = 0;
         int bossX = 0;
         int bossY = 0;
         foreach(GameObject room in Rooms)
@@ -200,9 +217,15 @@ public class DungeonSpawn : MonoBehaviour
                 }
             }
         }
-        Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss;
+        Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss; */
         #endregion
         //--------------------------------------------
+        //Losowanie pokoju bossa v2 - algorytm
+        #region bossgen2
+
+        DistanceFromSpawn(spawnX,spawnY, Rooms[spawnX,spawnY].GetComponent<Room>().distancetospawn);
+        Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss;
+        #endregion
 
         //Utworzenie sklepu
         #region shop
@@ -238,6 +261,7 @@ public class DungeonSpawn : MonoBehaviour
         #region garbage
         foreach (GameObject room in Rooms)
         {
+            room.GetComponent<Room>().CreateRoom();
             if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Ready)
             {
                 room.GetComponent<Room>().roomActiveness = global::Room.RoomActiveness.Empty;
@@ -254,39 +278,7 @@ public class DungeonSpawn : MonoBehaviour
         //---------------------------------------------
 
 
-        //Sprawdzanie s¹siadów
-        #region neighbours
-        foreach (GameObject room in Rooms)
-        {
-            room.GetComponent<Room>().CreateRoom();
-            if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
-            {
-                int x = room.GetComponent<Room>().Xpos;
-                int y = room.GetComponent<Room>().Ypos;
-                if ((x - 1) >= 0 && Rooms[x - 1, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
-                {
-                    room.GetComponent<Room>().neighbournumbers += 1;
-                    room.GetComponent<Room>().left = true;
-                }
-                if ((x + 1) < randomX && Rooms[x + 1, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
-                {
-                    room.GetComponent<Room>().neighbournumbers += 1;
-                    room.GetComponent<Room>().right = true;
-                }
-                if ((y - 1) >= 0 && Rooms[x, y - 1].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
-                {
-                    room.GetComponent<Room>().neighbournumbers += 1;
-                    room.GetComponent<Room>().down = true;
-                }
-                if ((y + 1) < randomY && Rooms[x, y + 1].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
-                {
-                    room.GetComponent<Room>().neighbournumbers += 1;
-                    room.GetComponent<Room>().top = true;
-                }
-            }
-        }
-        #endregion
-        //----------------------------------------------------
+  
        // Instantiate(Hero, Rooms[spawnX, spawnY].transform);
     }
 
@@ -296,5 +288,53 @@ public class DungeonSpawn : MonoBehaviour
         var type = assembly.GetType("UnityEditor.LogEntries");
         var method = type.GetMethod("Clear");
         method.Invoke(new object(), null);
+    }
+
+    public void DistanceFromSpawn(int x, int y, int distance)
+    {
+        if (Rooms[x, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+        {
+           
+            Rooms[x, y].GetComponent<Room>().distancetospawn = distance;
+            if (distance > maxdistance)
+            {
+                maxdistance = distance;
+                bossX = x;
+                bossY = y;
+            }
+            distance += 1;
+            
+            Rooms[x, y].GetComponent<Room>().distancechecked = true;
+            if (Rooms[x, y].GetComponent<Room>().left)
+            {
+                if (!Rooms[x - 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawn(x - 1, y, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().right)
+            {
+                if (!Rooms[x + 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawn(x + 1, y, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().top)
+            {
+                if (!Rooms[x , y+1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawn(x, y + 1, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().down)
+            {
+                if (!Rooms[x, y-1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawn(x, y - 1, distance);
+                }
+                
+            }
+
+        }
     }
 }

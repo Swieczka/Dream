@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Room : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Room : MonoBehaviour
         Ready,
         Filled,
     }
+    public TextMeshPro textmp;
     public GameObject[] RoomTypes;
     public RoomType roomType;
     public RoomActiveness roomActiveness;
@@ -27,28 +29,15 @@ public class Room : MonoBehaviour
     public bool top;
     public bool down;
     public int neighbournumbers;
+    public int distancetospawn;
+    public bool distancechecked;
     void Start()
     {
-
+        
     }
 
     void Update()
     {
-        /* switch(roomType)
-         {
-             case RoomType.Normal:
-                 gameObject.name = "NormalRoom";
-                 break;
-             case RoomType.Spawn:
-                 gameObject.name = "Spawn";
-                 break;
-             case RoomType.Shop:
-                 gameObject.name = "Shop";
-                 break;
-             case RoomType.Boss:
-                 gameObject.name = "BossRoom";
-                 break;
-         } */
     }
 
     public void CreateRoom()
@@ -72,5 +61,6 @@ public class Room : MonoBehaviour
                 Instantiate(RoomTypes[((int)roomType)], transform);
                 break;
         }
+        textmp.text = distancetospawn.ToString("00");
     }
 }

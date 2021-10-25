@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Room: {fileID: 4977613748290786611, guid: d14282057d0789f49ab652ecfdc17400, type: 3}
-  neighlimit: 2
+  neighlimit: 3
 --- !u!4 &1404052392
 Transform:
   m_ObjectHideFlags: 0
