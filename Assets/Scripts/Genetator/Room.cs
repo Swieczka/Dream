@@ -30,36 +30,20 @@ public class Room : MonoBehaviour
     public bool down;
     public int neighbournumbers;
     public int distancetospawn;
+    public int[] distancestospawn = new int[4] { 0, 0, 0, 0 };
     public bool distancechecked;
     public GameObject RoomCamera;
-    public DungeonSpawn RoomsStorage;
     public bool ActiveRoom;
+    [SerializeField] GameObject PlayerSpawner;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject[] DoorPositions; // 0-top 1- down 2-left 3-right
+    [SerializeField] GameObject[] DoorToSpawn;
     void Start()
     {
-        RoomsStorage = GameObject.FindGameObjectWithTag("Spawner").GetComponent<DungeonSpawn>();
     }
 
     void Update()
     {
-        if (ActiveRoom)
-        {
-            if (Input.GetKeyDown(KeyCode.DownArrow) && down)
-            {
-                CameraDown();
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow) && top)
-            {
-                CameraTop();
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && left)
-            {
-                CameraLeft();
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && right)
-            {
-                CameraRight();
-            }
-        }
     }
 
     public void CreateRoom()
@@ -77,6 +61,8 @@ public class Room : MonoBehaviour
                 Instantiate(RoomTypes[((int)roomType)], transform);
                 RoomCamera.SetActive(true);
                 ActiveRoom = true;
+                PlayerSpawner = GameObject.Find("PlayerSpawner");
+                GameObject PlayerSpawned = Instantiate(Player, PlayerSpawner.transform.position,Quaternion.identity);
                 break;
             case RoomType.Shop:
                 gameObject.name = "Shop";
@@ -92,15 +78,16 @@ public class Room : MonoBehaviour
                 break;
         }
         textmp.text = distancetospawn.ToString("00");
+        DoorSpawn();
     }
-
+    /*
     void CameraLeft()
     {
         RoomCamera.SetActive(false);
         ActiveRoom = false;
         Debug.Log("left");
         RoomsStorage.Rooms[Xpos - 1, Ypos].GetComponent<Room>().ActiveRoom = true;
-        RoomsStorage.Rooms[Xpos - 1, Ypos].GetComponent<Room>().RoomCamera.SetActive(true);
+        RoomsStorage.Rooms[Xpos - 1, Ypos].GetComponent<Room>().ActiveRoom = true;
     }
 
     void CameraDown()
@@ -128,5 +115,29 @@ public class Room : MonoBehaviour
         Debug.Log("right");
         RoomsStorage.Rooms[Xpos + 1, Ypos].GetComponent<Room>().ActiveRoom = true;
         RoomsStorage.Rooms[Xpos + 1, Ypos].GetComponent<Room>().RoomCamera.SetActive(true);
+    }
+    */
+    void DoorSpawn()
+    {
+        if(top)
+        {
+            GameObject Door = Instantiate(DoorToSpawn[0], DoorPositions[0].transform.position, Quaternion.identity);
+            Door.transform.parent = DoorPositions[0].transform;
+        }
+        if (down)
+        {
+            GameObject Door =  Instantiate(DoorToSpawn[1], DoorPositions[1].transform.position, Quaternion.identity);
+            Door.transform.parent = DoorPositions[1].transform;
+        }
+        if (left)
+        {
+            GameObject Door =  Instantiate(DoorToSpawn[2], DoorPositions[2].transform.position, Quaternion.identity);
+            Door.transform.parent = DoorPositions[2].transform;
+        }
+        if (right)
+        {
+            GameObject Door =  Instantiate(DoorToSpawn[3], DoorPositions[3].transform.position, Quaternion.identity);
+            Door.transform.parent = DoorPositions[3].transform;
+        }
     }
 }

@@ -223,7 +223,31 @@ public class DungeonSpawn : MonoBehaviour
         //Losowanie pokoju bossa v2 - algorytm
         #region bossgen2
 
-        DistanceFromSpawn(spawnX,spawnY, Rooms[spawnX,spawnY].GetComponent<Room>().distancetospawn);
+        DistanceFromSpawnLeft(spawnX,spawnY, Rooms[spawnX,spawnY].GetComponent<Room>().distancestospawn[0]);
+        DistanceFromSpawnRight(spawnX, spawnY, Rooms[spawnX, spawnY].GetComponent<Room>().distancestospawn[1]);
+        DistanceFromSpawnTop(spawnX, spawnY, Rooms[spawnX, spawnY].GetComponent<Room>().distancestospawn[2]);
+        DistanceFromSpawnDown(spawnX, spawnY, Rooms[spawnX, spawnY].GetComponent<Room>().distancestospawn[3]);
+        foreach(GameObject room in Rooms)
+        {
+            if(room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+            {
+                int lowestdistance=99;
+                for(int i =0;i<=3;i++)
+                {
+                    if(lowestdistance > room.GetComponent<Room>().distancestospawn[i])
+                    {
+                        lowestdistance = room.GetComponent<Room>().distancestospawn[i];
+                    } 
+                }
+                room.GetComponent<Room>().distancetospawn = lowestdistance;
+                if(lowestdistance>maxdistance)
+                {
+                    maxdistance = lowestdistance;
+                    bossX = room.GetComponent<Room>().Xpos;
+                    bossY = room.GetComponent<Room>().Ypos;
+                }
+            }
+        }
         Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss;
         #endregion
 
@@ -290,18 +314,18 @@ public class DungeonSpawn : MonoBehaviour
         method.Invoke(new object(), null);
     }
 
-    public void DistanceFromSpawn(int x, int y, int distance)
+    public void DistanceFromSpawnLeft(int x, int y, int distance)
     {
         if (Rooms[x, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
         {
            
-            Rooms[x, y].GetComponent<Room>().distancetospawn = distance;
-            if (distance > maxdistance)
+            Rooms[x, y].GetComponent<Room>().distancestospawn[0] = distance;
+          /*  if (distance > maxdistance)
             {
                 maxdistance = distance;
                 bossX = x;
                 bossY = y;
-            }
+            } */
             distance += 1;
             
             Rooms[x, y].GetComponent<Room>().distancechecked = true;
@@ -309,31 +333,177 @@ public class DungeonSpawn : MonoBehaviour
             {
                 if (!Rooms[x - 1, y].GetComponent<Room>().distancechecked)
                 {
-                    DistanceFromSpawn(x - 1, y, distance);
+                    DistanceFromSpawnLeft(x - 1, y, distance);
                 }
             }
             if (Rooms[x, y].GetComponent<Room>().right)
             {
                 if (!Rooms[x + 1, y].GetComponent<Room>().distancechecked)
                 {
-                    DistanceFromSpawn(x + 1, y, distance);
+                    DistanceFromSpawnLeft(x + 1, y, distance);
                 }
             }
             if (Rooms[x, y].GetComponent<Room>().top)
             {
                 if (!Rooms[x , y+1].GetComponent<Room>().distancechecked)
                 {
-                    DistanceFromSpawn(x, y + 1, distance);
+                    DistanceFromSpawnLeft(x, y + 1, distance);
                 }
             }
             if (Rooms[x, y].GetComponent<Room>().down)
             {
                 if (!Rooms[x, y-1].GetComponent<Room>().distancechecked)
                 {
-                    DistanceFromSpawn(x, y - 1, distance);
+                    DistanceFromSpawnLeft(x, y - 1, distance);
                 }
                 
             }
+
+        }
+    }
+    public void DistanceFromSpawnRight(int x, int y, int distance)
+    {
+        if (Rooms[x, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+        {
+
+            Rooms[x, y].GetComponent<Room>().distancestospawn[1] = distance;
+            /*  if (distance > maxdistance)
+              {
+                  maxdistance = distance;
+                  bossX = x;
+                  bossY = y;
+              } */
+            distance += 1;
+
+            Rooms[x, y].GetComponent<Room>().distancechecked = false;
+            if (Rooms[x, y].GetComponent<Room>().right)
+            {
+                if (Rooms[x + 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnRight(x + 1, y, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().left)
+            {
+                if (Rooms[x - 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnRight(x - 1, y, distance);
+                }
+            }
+            
+            if (Rooms[x, y].GetComponent<Room>().top)
+            {
+                if (Rooms[x, y + 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnRight(x, y + 1, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().down)
+            {
+                if (Rooms[x, y - 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnRight(x, y - 1, distance);
+                }
+
+            }
+
+        }
+    }
+    public void DistanceFromSpawnTop(int x, int y, int distance)
+    {
+        if (Rooms[x, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+        {
+
+            Rooms[x, y].GetComponent<Room>().distancestospawn[2] = distance;
+            /*  if (distance > maxdistance)
+              {
+                  maxdistance = distance;
+                  bossX = x;
+                  bossY = y;
+              } */
+            distance += 1;
+
+            Rooms[x, y].GetComponent<Room>().distancechecked = true;
+
+            if (Rooms[x, y].GetComponent<Room>().top)
+            {
+                if (!Rooms[x, y + 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnTop(x, y + 1, distance);
+                }
+            } 
+            if (Rooms[x, y].GetComponent<Room>().left)
+            {
+                if (!Rooms[x - 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnTop(x - 1, y, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().right)
+            {
+                if (!Rooms[x + 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnTop(x + 1, y, distance);
+                }
+            }
+            
+            if (Rooms[x, y].GetComponent<Room>().down)
+            {
+                if (!Rooms[x, y - 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnTop(x, y - 1, distance);
+                }
+
+            }
+
+        }
+    }
+    public void DistanceFromSpawnDown(int x, int y, int distance)
+    {
+        if (Rooms[x, y].GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
+        {
+
+            Rooms[x, y].GetComponent<Room>().distancestospawn[3] = distance;
+            /*  if (distance > maxdistance)
+              {
+                  maxdistance = distance;
+                  bossX = x;
+                  bossY = y;
+              } */
+            distance += 1;
+
+            Rooms[x, y].GetComponent<Room>().distancechecked = false;
+            if (Rooms[x, y].GetComponent<Room>().down)
+            {
+                if (Rooms[x, y - 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnDown(x, y - 1, distance);
+                }
+
+            }
+            if (Rooms[x, y].GetComponent<Room>().right)
+            {
+                if (Rooms[x + 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnDown(x + 1, y, distance);
+                }
+            }
+            if (Rooms[x, y].GetComponent<Room>().left)
+            {
+                if (Rooms[x - 1, y].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnDown(x - 1, y, distance);
+                }
+            }
+
+            if (Rooms[x, y].GetComponent<Room>().top)
+            {
+                if (Rooms[x, y + 1].GetComponent<Room>().distancechecked)
+                {
+                    DistanceFromSpawnDown(x, y + 1, distance);
+                }
+            }
+            
 
         }
     }
