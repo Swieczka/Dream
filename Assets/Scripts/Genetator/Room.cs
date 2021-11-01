@@ -34,8 +34,6 @@ public class Room : MonoBehaviour
     public bool distancechecked;
     public GameObject RoomCamera;
     public bool ActiveRoom;
-    [SerializeField] GameObject PlayerSpawner;
-    [SerializeField] GameObject Player;
     [SerializeField] GameObject[] DoorPositions; // 0-top 1- down 2-left 3-right
     [SerializeField] GameObject[] DoorToSpawn;
     void Start()
@@ -61,8 +59,6 @@ public class Room : MonoBehaviour
                 Instantiate(RoomTypes[((int)roomType)], transform);
                 RoomCamera.SetActive(true);
                 ActiveRoom = true;
-                PlayerSpawner = GameObject.Find("PlayerSpawner");
-                GameObject PlayerSpawned = Instantiate(Player, PlayerSpawner.transform.position,Quaternion.identity);
                 break;
             case RoomType.Shop:
                 gameObject.name = "Shop";

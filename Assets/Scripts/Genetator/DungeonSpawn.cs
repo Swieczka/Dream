@@ -29,10 +29,12 @@ public class DungeonSpawn : MonoBehaviour
 
     void DestroyDungeon()
     {
-        foreach(GameObject Room in Rooms)
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        foreach (GameObject Room in Rooms)
         {
             Destroy(Room);
-        }
+        } 
+        
         ClearLog();
     }
 
