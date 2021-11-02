@@ -11,43 +11,45 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerAnimator = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-        
     }
 
     void Update()
-    {
-        if(Input.GetKey(KeyCode.W))
+    { 
+        if(Input.GetAxisRaw("Vertical") >0)
         {
             PlayerAnimator.SetBool("GoUp", true);
-        }
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            PlayerAnimator.SetBool("GoUp", false);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            PlayerAnimator.SetBool("GoDown", true);
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
             PlayerAnimator.SetBool("GoDown", false);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            PlayerAnimator.SetBool("GoLeft", true);
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
             PlayerAnimator.SetBool("GoLeft", false);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            PlayerAnimator.SetBool("GoRight", true);
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
             PlayerAnimator.SetBool("GoRight", false);
         }
+        else if(Input.GetAxisRaw("Vertical") < 0)
+        {
+            PlayerAnimator.SetBool("GoUp", false);
+            PlayerAnimator.SetBool("GoDown", true);
+            PlayerAnimator.SetBool("GoLeft", false);
+            PlayerAnimator.SetBool("GoRight", false);
+        }
+        else if(Input.GetAxisRaw("Vertical") == 0)
+        {
+            PlayerAnimator.SetBool("GoUp", false);
+            PlayerAnimator.SetBool("GoDown", false);
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                PlayerAnimator.SetBool("GoRight", true);
+                PlayerAnimator.SetBool("GoLeft", false);
+            }
+            else if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+                PlayerAnimator.SetBool("GoRight", false);
+                PlayerAnimator.SetBool("GoLeft", true);
+            }
+            else if (Input.GetAxisRaw("Horizontal") == 0)
+            {
+                PlayerAnimator.SetBool("GoRight", false);
+                PlayerAnimator.SetBool("GoLeft", false);
+            }
+        }
+        
         ProcessInputs();
     }
 
@@ -60,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
 
         moveDirection = new Vector2(moveX, moveY).normalized;
     }
