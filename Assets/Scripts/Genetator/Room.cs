@@ -34,10 +34,12 @@ public class Room : MonoBehaviour
     public bool distancechecked;
     public GameObject RoomCamera;
     public bool ActiveRoom;
+    public bool IsRoomFinished;
     [SerializeField] GameObject[] DoorPositions; // 0-top 1- down 2-left 3-right
     [SerializeField] GameObject[] DoorToSpawn;
     void Start()
     {
+        IsRoomFinished = false;
     }
 
     void Update()

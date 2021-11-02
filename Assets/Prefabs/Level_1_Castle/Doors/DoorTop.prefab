@@ -156,3 +156,5 @@ MonoBehaviour:
   RoomsStorage: {fileID: 0}
   RoomObj: {fileID: 0}
   direction: 0
+  DoorSprites:
+  - {fileID: 21300000, guid: 2173e7d98cd146a459ca0ab53967f761, type: 3}
