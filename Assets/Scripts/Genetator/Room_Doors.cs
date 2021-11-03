@@ -23,13 +23,11 @@ public class Room_Doors : MonoBehaviour
     {
         if(!RoomObj.GetComponent<Room>().IsRoomFinished)
         {
-            GetComponent<Renderer>().material.color = Color.black;
-           // GetComponent<SpriteRenderer>().sprite = DoorSprites[0];
+            GetComponent<SpriteRenderer>().sprite = DoorSprites[0];
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.white;
-           // GetComponent<SpriteRenderer>().sprite = DoorSprites[1];
+            GetComponent<SpriteRenderer>().sprite = DoorSprites[1];
         }
     }
 
@@ -44,8 +42,7 @@ public class Room_Doors : MonoBehaviour
 
     void Teleport(int x, int y)
     {
-        Math.AddVectors2(playerMovement.gameObject, x, y);
-     //   playerMovement.gameObject.transform.position = new Vector2(playerMovement.gameObject.transform.position.x+ x, playerMovement.gameObject.transform.position.y+ y);
+        playerMovement.gameObject.transform.position += new Vector3(x,y);
         int Xpos = RoomScript.Xpos;
         int Ypos = RoomScript.Ypos;
         switch (direction) // 0-top 1- down 2-left 3-right

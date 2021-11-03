@@ -157,4 +157,5 @@ MonoBehaviour:
   RoomObj: {fileID: 0}
   direction: 0
   DoorSprites:
+  - {fileID: 21300000, guid: 1ccae9ee934bc7b46a016ebe9e72c64d, type: 3}
   - {fileID: 21300000, guid: 2173e7d98cd146a459ca0ab53967f761, type: 3}

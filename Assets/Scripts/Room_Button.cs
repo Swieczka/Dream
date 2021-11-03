@@ -7,8 +7,7 @@ public class Room_Button : MonoBehaviour
     [SerializeField] Room RoomObj;
     void Start()
     {
-        // gameObject.transform.position = Math.AddVectors2(gameObject.transform.position, Random.Range(-5f, 5f), Random.Range(-3f, 3f));
-        Math.AddVectors2(gameObject, Random.Range(-5f, 5f), Random.Range(-3f, 3f));
+        gameObject.transform.position += new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f));
         RoomObj = gameObject.transform.parent.gameObject.GetComponent<Room>();
     }
 
