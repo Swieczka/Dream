@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
     Animator PlayerAnimator;
     Rigidbody2D rb2d;
     Vector2 moveDirection;
+    PlayerStats playerStats;
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
         PlayerAnimator = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -68,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb2d.velocity = new Vector2(moveDirection.x * 5, moveDirection.y*5);
+        rb2d.velocity = new Vector2(moveDirection.x * playerStats.playerMovementSpeed, moveDirection.y * playerStats.playerMovementSpeed);
     }
 
 }

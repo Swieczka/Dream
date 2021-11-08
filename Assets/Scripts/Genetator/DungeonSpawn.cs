@@ -198,32 +198,10 @@ public class DungeonSpawn : MonoBehaviour
             }
         }
         #endregion
-        //----------------------------------------------------
 
-        //Losowanie pokoju bossa v1 - pitagoras
-        #region bossgen
-        /* int furthestdistance = 0;
-        int bossX = 0;
-        int bossY = 0;
-        foreach(GameObject room in Rooms)
-        {
-            if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled && room.GetComponent<Room>().roomType == global::Room.RoomType.Normal)
-            {
-                int distanceX = ((room.GetComponent<Room>().Xpos - spawnX) * (room.GetComponent<Room>().Xpos - spawnX));
-                int distanceY = ((room.GetComponent<Room>().Ypos - spawnY) * (room.GetComponent<Room>().Ypos - spawnY));
-                if(distanceX+distanceY > furthestdistance)
-                {
-                    furthestdistance = distanceX + distanceY;
-                    bossX = room.GetComponent<Room>().Xpos;
-                    bossY = room.GetComponent<Room>().Ypos;
-                }
-            }
-        }
-        Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss; */
-        #endregion
         //--------------------------------------------
-        //Losowanie pokoju bossa v2 - algorytm
-        #region bossgen2
+        //Losowanie pokoju bossa - algorytm
+        #region bossgen
 
         DistanceFromSpawnLeft(spawnX,spawnY, Rooms[spawnX,spawnY].GetComponent<Room>().distancestospawn[0]);
         DistanceFromSpawnRight(spawnX, spawnY, Rooms[spawnX, spawnY].GetComponent<Room>().distancestospawn[1]);
@@ -301,11 +279,6 @@ public class DungeonSpawn : MonoBehaviour
             }
         }
         #endregion
-        //---------------------------------------------
-
-
-  
-       // Instantiate(Hero, Rooms[spawnX, spawnY].transform);
     }
 
     public void ClearLog()
