@@ -1,10 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Animator PlayerAnimator;
+     Animator PlayerAnimator;
+    [Serializable]
+    public class Animators
+    {
+        [Header("Animators")]
+         public AnimatorOverrideController DefaultAnimator;
+         public AnimatorOverrideController WarriorAnimator;
+         public AnimatorOverrideController ArcherAnimator;
+         public AnimatorOverrideController MageAnimator;
+    }
+
+    [SerializeField] Animators animators;
     Rigidbody2D rb2d;
     Vector2 moveDirection;
     PlayerStats playerStats;
@@ -14,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
         PlayerAnimator = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
-
     void Update()
-    { 
-        if(Input.GetAxisRaw("Vertical") >0)
+    {
+
+        if (Input.GetAxisRaw("Vertical") >0)
         {
             PlayerAnimator.SetBool("GoUp", true);
             PlayerAnimator.SetBool("GoDown", false);
@@ -51,7 +63,13 @@ public class PlayerMovement : MonoBehaviour
                 PlayerAnimator.SetBool("GoLeft", false);
             }
         }
-        
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine("SwordAttack");
+         
+        }
+
         ProcessInputs();
     }
 
@@ -73,4 +91,31 @@ public class PlayerMovement : MonoBehaviour
         rb2d.velocity = new Vector2(moveDirection.x * playerStats.playerMovementSpeed, moveDirection.y * playerStats.playerMovementSpeed);
     }
 
+    public void ChangePlayerClass()
+    {
+        switch (gameObject.GetComponent<PlayerStats>().playerClass)
+        {
+            case PlayerStats.PlayerClass.Default:
+                PlayerAnimator.runtimeAnimatorController = animators.DefaultAnimator;
+                break;
+            case PlayerStats.PlayerClass.Warrior:
+                PlayerAnimator.runtimeAnimatorController = animators.WarriorAnimator;
+                break;
+            case PlayerStats.PlayerClass.Mage:
+                PlayerAnimator.runtimeAnimatorController = animators.MageAnimator;
+                break;
+            case PlayerStats.PlayerClass.Archer:
+                PlayerAnimator.runtimeAnimatorController = animators.ArcherAnimator;
+                break;
+        }
+    }
+
+    IEnumerator SwordAttack()
+    {
+        GameObject.Find("Sword").GetComponent<Animator>().SetBool("Attack360", true);
+        GameObject.Find("Sword").GetComponent<BoxCollider2D>().enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        GameObject.Find("Sword").GetComponent<Animator>().SetBool("Attack360", false);
+        GameObject.Find("Sword").GetComponent<BoxCollider2D>().enabled = false;
+    }
 }
