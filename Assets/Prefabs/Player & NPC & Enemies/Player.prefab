@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cacf3da5a50608347b356f0ebee4ff7a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6039216}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 5700262180336322232}
   - component: {fileID: 6343079516181306871}
   - component: {fileID: -3211393785996701044}
+  - component: {fileID: 7872051621116711042}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -319,10 +320,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: V
   playerMovementSpeed: 5
-  playerAttackSpeed: 0
+  playerAttackSpeed: 1
   playerAttackRange: 0
   playerAttack: 0
   playerDefense: 0
   playerLuck: 0
   playerHealthPoints: 0
-  playerClass: 0
+  playerClass: 1
+--- !u!114 &7872051621116711042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343079516181306867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef48f5a715281e409197e07c89336ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability_1_cooldown: 0
+  ability_2_cooldown: 0
+  ability_3_cooldown: 0
+  ability_1_cooldown_def: 0
+  ability_2_cooldown_def: 0
+  ability_3_cooldown_def: 0

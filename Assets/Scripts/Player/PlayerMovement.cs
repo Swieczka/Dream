@@ -64,10 +64,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            StartCoroutine("SwordAttack");
-         
+            gameObject.GetComponent<PlayerAbilities>().UseAbility(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            gameObject.GetComponent<PlayerAbilities>().UseAbility(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            gameObject.GetComponent<PlayerAbilities>().UseAbility(3);
         }
 
         ProcessInputs();
@@ -108,14 +115,6 @@ public class PlayerMovement : MonoBehaviour
                 PlayerAnimator.runtimeAnimatorController = animators.ArcherAnimator;
                 break;
         }
-    }
-
-    IEnumerator SwordAttack()
-    {
-        GameObject.Find("Sword").GetComponent<Animator>().SetBool("Attack360", true);
-        GameObject.Find("Sword").GetComponent<BoxCollider2D>().enabled = true;
-        yield return new WaitForSeconds(0.5f);
-        GameObject.Find("Sword").GetComponent<Animator>().SetBool("Attack360", false);
-        GameObject.Find("Sword").GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<PlayerAbilities>().SetCooldown();
     }
 }
