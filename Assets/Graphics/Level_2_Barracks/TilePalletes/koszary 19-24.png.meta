@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      koszary 19-24_3: 838414391181845721
+      koszary 19-24_4: -5479806187911482587
+      koszary 19-24_0: -7316590098979334653
+      koszary 19-24_5: 2809618493092566551
+      koszary 19-24_1: 3899750500529168673
+      koszary 19-24_2: -8097561601540371291
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

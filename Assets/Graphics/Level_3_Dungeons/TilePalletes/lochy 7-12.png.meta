@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      lochy 7-12_2: 1797425785393538117
+      lochy 7-12_4: 7962996169299270535
+      lochy 7-12_5: 5260087399340544680
+      lochy 7-12_3: -762902935855568087
+      lochy 7-12_0: 8411587373497050927
+      lochy 7-12_1: -5080119752552721271
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

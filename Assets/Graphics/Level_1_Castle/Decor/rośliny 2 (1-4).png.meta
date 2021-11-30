@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      "ro\u015Bliny 2 (1-4)_0": -7800556822970892185
+      "ro\u015Bliny 2 (1-4)_2": 6087631267720119542
+      "ro\u015Bliny 2 (1-4)_3": -8064323246324749395
+      "ro\u015Bliny 2 (1-4)_1": 7435472519784518036
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

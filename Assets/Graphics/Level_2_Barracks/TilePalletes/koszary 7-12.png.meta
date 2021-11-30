@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      koszary 7-12_0: -8785130294209578159
+      koszary 7-12_1: -2842828311860362595
+      koszary 7-12_4: 2934898619026188944
+      koszary 7-12_3: 6631691335343474955
+      koszary 7-12_2: 4631368136288798323
+      koszary 7-12_5: 6298341974732968249
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
