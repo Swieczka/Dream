@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab399d6bd5240b43a6b23714dcb141c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Room: {fileID: 4977613748290786611, guid: d14282057d0789f49ab652ecfdc17400, type: 3}
+  Room: {fileID: 4977613748290786611, guid: befd12a5d7d611749a1929b3991b5eaf, type: 3}
   neighlimit: 2
 --- !u!4 &1404052392
 Transform:

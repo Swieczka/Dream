@@ -112,14 +112,11 @@ public class PlayerAbilities : MonoBehaviour
     }
     IEnumerator SwordSpin360()
     {
-        GameObject sword = GameObject.Find("Sword");
-        sword.GetComponent<Animator>().speed = gameObject.GetComponent<PlayerStats>().playerAttackSpeed;
-        sword.GetComponent<Animator>().SetBool("Attack360", true);
-        sword.GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.GetComponent<Animator>().speed = gameObject.GetComponent<PlayerStats>().playerAttackSpeed;
+        gameObject.GetComponent<Animator>().SetTrigger("Spin360");
         yield return new WaitForSeconds(0.5f / gameObject.GetComponent<PlayerStats>().playerAttackSpeed);
-        sword.GetComponent<Animator>().SetBool("Attack360", false);
-        sword.GetComponent<BoxCollider2D>().enabled = false;
-        sword.GetComponent<Animator>().speed = 1;
+        gameObject.GetComponent<Animator>().ResetTrigger("Spin360");
+        gameObject.GetComponent<Animator>().speed = 1;
     }
 
     IEnumerator GoldenSkin()

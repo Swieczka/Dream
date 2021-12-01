@@ -19,7 +19,8 @@ public class Room : MonoBehaviour
         Filled,
     }
     public TextMeshPro textmp;
-    public GameObject[] RoomTypes;
+    public GameObject[] RoomsNormal;
+    public GameObject[] RoomsSpecial;
     public RoomType roomType;
     public RoomActiveness roomActiveness;
     public int Xpos;
@@ -52,25 +53,25 @@ public class Room : MonoBehaviour
         {
             case RoomType.Normal:
                 gameObject.name = "NormalRoom";
-                Instantiate(RoomTypes[((int)roomType)],transform);
+                Instantiate(RoomsNormal[Random.Range(0,RoomsNormal.Length)],transform);
                 RoomCamera.SetActive(false);
                 ActiveRoom = false;
                 break;
             case RoomType.Spawn:
                 gameObject.name = "Spawn";
-                Instantiate(RoomTypes[((int)roomType)], transform);
+                Instantiate(RoomsSpecial[((int)roomType-1)], transform);
                 RoomCamera.SetActive(true);
                 ActiveRoom = true;
                 break;
             case RoomType.Shop:
                 gameObject.name = "Shop";
-                Instantiate(RoomTypes[((int)roomType)], transform);
+                Instantiate(RoomsSpecial[((int)roomType-1)], transform);
                 RoomCamera.SetActive(false);
                 ActiveRoom = false;
                 break;
             case RoomType.Boss:
                 gameObject.name = "BossRoom";
-                Instantiate(RoomTypes[((int)roomType)], transform);
+                Instantiate(RoomsSpecial[((int)roomType-1)], transform);
                 RoomCamera.SetActive(false);
                 ActiveRoom = false;
                 break;

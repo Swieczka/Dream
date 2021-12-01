@@ -29,41 +29,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetAxisRaw("Vertical") >0)
-        {
-            PlayerAnimator.SetBool("GoUp", true);
-            PlayerAnimator.SetBool("GoDown", false);
-            PlayerAnimator.SetBool("GoLeft", false);
-            PlayerAnimator.SetBool("GoRight", false);
-        }
-        else if(Input.GetAxisRaw("Vertical") < 0)
-        {
-            PlayerAnimator.SetBool("GoUp", false);
-            PlayerAnimator.SetBool("GoDown", true);
-            PlayerAnimator.SetBool("GoLeft", false);
-            PlayerAnimator.SetBool("GoRight", false);
-        }
-        else if(Input.GetAxisRaw("Vertical") == 0)
-        {
-            PlayerAnimator.SetBool("GoUp", false);
-            PlayerAnimator.SetBool("GoDown", false);
-            if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                PlayerAnimator.SetBool("GoRight", true);
-                PlayerAnimator.SetBool("GoLeft", false);
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-                PlayerAnimator.SetBool("GoRight", false);
-                PlayerAnimator.SetBool("GoLeft", true);
-            }
-            else if (Input.GetAxisRaw("Horizontal") == 0)
-            {
-                PlayerAnimator.SetBool("GoRight", false);
-                PlayerAnimator.SetBool("GoLeft", false);
-            }
-        }
-
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             gameObject.GetComponent<PlayerAbilities>().UseAbility(1);
@@ -90,6 +55,22 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        float attackX = Input.GetAxisRaw("HorizontalAttack");
+        float attackY = Input.GetAxisRaw("VerticalAttack");
+
+        PlayerAnimator.SetFloat("Horizontal", moveX);
+        PlayerAnimator.SetFloat("Vertical", moveY);
+        if(attackX != 0 || attackY != 0)
+        {
+            PlayerAnimator.SetTrigger("AttackTrigger");
+            PlayerAnimator.SetFloat("HorizontalAttack", attackX);
+            PlayerAnimator.SetFloat("VerticalAttack", attackY);
+        }
+        else
+        {
+            PlayerAnimator.ResetTrigger("AttackTrigger");
+        }
+        
         moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
