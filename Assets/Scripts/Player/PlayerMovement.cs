@@ -55,11 +55,14 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        float attackX = Input.GetAxisRaw("HorizontalAttack");
-        float attackY = Input.GetAxisRaw("VerticalAttack");
+        moveDirection = new Vector2(moveX, moveY).normalized;
 
         PlayerAnimator.SetFloat("Horizontal", moveX);
         PlayerAnimator.SetFloat("Vertical", moveY);
+
+        float attackX = Input.GetAxisRaw("HorizontalAttack");
+        float attackY = Input.GetAxisRaw("VerticalAttack");
+        
         if(attackX != 0 || attackY != 0)
         {
             PlayerAnimator.SetTrigger("AttackTrigger");
@@ -71,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
             PlayerAnimator.ResetTrigger("AttackTrigger");
         }
         
-        moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
     void Move()
@@ -98,4 +100,4 @@ public class PlayerMovement : MonoBehaviour
         }
         gameObject.GetComponent<PlayerAbilities>().SetCooldown();
     }
-}
+} 

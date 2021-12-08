@@ -1,184 +1,842 @@
 Using pre-set license
-Built from '2021.2/staging' branch; Version is '2021.2.4f1 (99ba6aa4c552) revision 10074730'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1348; Version 2009; 64bit' Language: 'pl' Physical Memory: 32636 MB
+Built from '2021.1/staging' branch; Version is '2021.1.24f1 (6667702a1e7c) revision 6711152'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1288; Version 2009; 64bit' Language: 'pl' Physical Memory: 16332 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.2.4f1\Editor\Unity.exe
+D:\unity\2021.1.24f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/rafal/Documents/GitHub/ProjektCyfrowy2D
+D:/projekty/ProjektCyfrowy2D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57492
-Successfully changed project path to: C:/Users/rafal/Documents/GitHub/ProjektCyfrowy2D
-C:/Users/rafal/Documents/GitHub/ProjektCyfrowy2D
-[UnityMemory] Configuration Parameters - Can be set up in boot.config
-    "memorysetup-bucket-allocator-granularity=16"
-    "memorysetup-bucket-allocator-bucket-count=8"
-    "memorysetup-bucket-allocator-block-size=33554432"
-    "memorysetup-bucket-allocator-block-count=8"
-    "memorysetup-main-allocator-block-size=16777216"
-    "memorysetup-thread-allocator-block-size=16777216"
-    "memorysetup-gfx-main-allocator-block-size=16777216"
-    "memorysetup-gfx-thread-allocator-block-size=16777216"
-    "memorysetup-cache-allocator-block-size=4194304"
-    "memorysetup-typetree-allocator-block-size=2097152"
-    "memorysetup-profiler-bucket-allocator-granularity=16"
-    "memorysetup-profiler-bucket-allocator-bucket-count=8"
-    "memorysetup-profiler-bucket-allocator-block-size=33554432"
-    "memorysetup-profiler-bucket-allocator-block-count=8"
-    "memorysetup-profiler-allocator-block-size=16777216"
-    "memorysetup-profiler-editor-allocator-block-size=1048576"
-    "memorysetup-temp-allocator-size-main=16777216"
-    "memorysetup-job-temp-allocator-block-size=2097152"
-    "memorysetup-job-temp-allocator-block-size-background=1048576"
-    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-    "memorysetup-temp-allocator-size-background-worker=32768"
-    "memorysetup-temp-allocator-size-job-worker=262144"
-    "memorysetup-temp-allocator-size-preload-manager=33554432"
-    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
-    "memorysetup-temp-allocator-size-audio-worker=65536"
-    "memorysetup-temp-allocator-size-cloud-worker=32768"
-    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
-    "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 104.78 ms, found 6 plugins.
+51836
+Successfully changed project path to: D:/projekty/ProjektCyfrowy2D
+D:/projekty/ProjektCyfrowy2D
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 127.88 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2021.2.4f1 (99ba6aa4c552)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/rafal/Documents/GitHub/ProjektCyfrowy2D/Assets
+Initialize engine version: 2021.1.24f1 (6667702a1e7c)
+[Subsystems] Discovering subsystems at path D:/unity/2021.1.24f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/projekty/ProjektCyfrowy2D/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   NVIDIA
-    VRAM:     6023 MB
-    Driver:   30.0.14.9649
+    VRAM:     6052 MB
+    Driver:   30.0.14.7168
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
+Mono path[0] = 'D:/unity/2021.1.24f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/2021.1.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity/2021.1.24f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013531 seconds.
+Register platform support module: D:/unity/2021.1.24f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/unity/2021.1.24f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002006 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 100.84 ms, found 6 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 120.23 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.691 seconds
+- Completed reload, in  3.109 seconds
 Domain Reload Profiling:
-	ReloadAssembly (691ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (3109ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (507ms)
-			LoadAssemblies (85ms)
+		EndReloadAssembly (551ms)
+			LoadAssemblies (96ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (112ms)
+			SetupTypeCache (185ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (302ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (283ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (101ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (135ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				RefreshPlugins (120ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (115ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.016557 seconds.
+Registered in 0.012637 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rafal\Documents\GitHub\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rafal\Documents\GitHub\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 94.94 ms, found 6 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 125.44 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.797 seconds
+- Completed reload, in  1.575 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1797ms)
-		BeginReloadAssembly (162ms)
+	ReloadAssembly (1575ms)
+		BeginReloadAssembly (201ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1531ms)
-			LoadAssemblies (89ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1310ms)
+			LoadAssemblies (150ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (225ms)
+			SetupTypeCache (421ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (1072ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (587ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (95ms)
-				BeforeProcessingInitializeOnLoad (106ms)
-				ProcessInitializeOnLoadAttributes (813ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
-				AfterProcessingInitializeOnLoad (13ms)
+				RefreshPlugins (126ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (335ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.06 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.23 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3886 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 52 unused Assets / (57.0 KB). Loaded Objects now: 4374.
-Memory consumption went from 152.4 MB to 152.3 MB.
-Total: 4.404600 ms (FindLiveObjects: 0.402900 ms CreateObjectMapping: 0.167800 ms MarkObjects: 3.736800 ms  DeleteObjects: 0.095600 ms)
+Unloading 3724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 140.2 MB.
+System memory in use after: 140.4 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 4201.
+Total: 3.956700 ms (FindLiveObjects: 0.325600 ms CreateObjectMapping: 0.096300 ms MarkObjects: 3.455700 ms  DeleteObjects: 0.078000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 217482.095087 seconds.
-  path: Assets/Graphics/Level_1_Castle/Decor/kamkeń 1.png
-  artifactKey: Guid(4e922a78aa19e404f9efaa0874b63a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Level_1_Castle/Decor/kamkeń 1.png using Guid(4e922a78aa19e404f9efaa0874b63a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '355c47b9c352dc6c4076f9eac8f82716') in 0.123211 seconds 
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites
+  artifactKey: Guid(6bf0b251df64a2c408c0b19645a75ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites using Guid(6bf0b251df64a2c408c0b19645a75ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fa6ee52b3749d5cec71bc037fbd25b') in 0.012269 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Graphics/Level_1_Castle/Decor/kamień 2.png
-  artifactKey: Guid(1fcd22d6b242c6e4db94dfc6df8bea81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Level_1_Castle/Decor/kamień 2.png using Guid(1fcd22d6b242c6e4db94dfc6df8bea81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e0d7a3d66258a43caffcfec937a65d') in 0.017666 seconds 
+  Time since last request: 27.724830 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie
+  artifactKey: Guid(f986fa859222760488856daa4bbcc03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie using Guid(f986fa859222760488856daa4bbcc03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6ecce428b59908c7e931e3233355be') in 0.008570 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Graphics/Level_1_Castle/Decor/Decorations.prefab
-  artifactKey: Guid(4c85a6693b1c2be4193512a0419e637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Level_1_Castle/Decor/Decorations.prefab using Guid(4c85a6693b1c2be4193512a0419e637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2f3405e70063795972f888a96a1bd5f') in 0.054982 seconds 
+  Time since last request: 0.047349 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png
+  artifactKey: Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png using Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308dca80cb8747aa7282d1772df71ba7') in 0.136207 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Graphics/Level_1_Castle/Decor
-  artifactKey: Guid(7c07188d94833874a829aeb9ed9181c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphics/Level_1_Castle/Decor using Guid(7c07188d94833874a829aeb9ed9181c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7608661cee155342520e1e41473e3151') in 0.008828 seconds 
+  Time since last request: 0.000255 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png
+  artifactKey: Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png using Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cebe424812521ba175247f6e898bc63') in 0.015989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png
+  artifactKey: Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png using Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e991f648190c182b19e892621ed8ee') in 0.016784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png
+  artifactKey: Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png using Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b63f033967a06e46b8c094d93d1abe7f') in 0.015273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.486955 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png
+  artifactKey: Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png using Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2300b8d6276c4eae5c7efdf2e7405cc') in 0.011087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png
+  artifactKey: Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png using Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0204c8246c4e3bd5186fb6ce47ba697') in 0.010956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png
+  artifactKey: Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png using Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8fed236cd21295eb8e23cf4182dcf9') in 0.011593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png
+  artifactKey: Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png using Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '955a42faa7a5df218402a42b440b84b6') in 0.010498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.572267 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png
+  artifactKey: Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png using Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd52c16d95066c0074aa2db4d624f4b85') in 0.007611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png
+  artifactKey: Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png using Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c0b08ff13a54824f7cd6d38d61a9430') in 0.007819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png
+  artifactKey: Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png using Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79bee89a5f5cce50084ce62eaa24432') in 0.010761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png
+  artifactKey: Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png using Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdba5375a105dd00512de35791864202') in 0.009456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.912975 seconds.
+  path: Assets/Graphics/Player/Sprite/Mage/mag/GÓRA mag.png
+  artifactKey: Guid(e4948b5239bc3c243b76080bff64e5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Mage/mag/GÓRA mag.png using Guid(e4948b5239bc3c243b76080bff64e5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e377c47bf64381898ce04851ae9ed20') in 0.070740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Graphics/Player/Sprite/Mage/mag/prawo mag.png
+  artifactKey: Guid(ebc4bb4ed8092b640b9826e74018fafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Mage/mag/prawo mag.png using Guid(ebc4bb4ed8092b640b9826e74018fafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2dab4c20fb5e52c60523d37aa995502') in 0.045566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Graphics/Player/Sprite/Mage/mag/przód mag.png
+  artifactKey: Guid(eecb1f394604d614d9c63e73615424d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Mage/mag/przód mag.png using Guid(eecb1f394604d614d9c63e73615424d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d3a5f66595d2eccdd655d076640d6dc') in 0.029442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Graphics/Player/Sprite/Mage/mag/lewo mag.png
+  artifactKey: Guid(d4b481f1fa2dd354699fea854340be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Mage/mag/lewo mag.png using Guid(d4b481f1fa2dd354699fea854340be6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b43816e4f8839f9958f1f941ff60a2') in 0.221939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.861886 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka
+  artifactKey: Guid(a83d00a8503da0c4e86c5098d196d687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka using Guid(a83d00a8503da0c4e86c5098d196d687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84803169c11ee03d692751db25368880') in 0.006095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png
+  artifactKey: Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png using Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b0afc6dd9687720375199130813278') in 0.021271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png
+  artifactKey: Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png using Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '723b72fc7e3cbb4519881e088f43670e') in 0.018083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png
+  artifactKey: Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png using Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d6745524ba5cbe932988c4d2562e06') in 0.055108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png
+  artifactKey: Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png using Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2806ac2a0b71cdb5b5fdf7b7b0659811') in 0.026854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png
+  artifactKey: Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png using Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58f6042cdb5e5df89abc85839bb895cc') in 0.015713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.863621 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png
+  artifactKey: Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png using Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbc48cdc32a50bc3cc8474f0fe6bccc') in 0.011934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png
+  artifactKey: Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png using Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7e69b562718d2751feafb014bb516f2') in 0.012819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png
+  artifactKey: Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png using Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca18e1969f735ad2588a0efc6d330e3') in 0.012056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png
+  artifactKey: Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png using Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842f1e11f7baaf501fe6c2c218e653ba') in 0.012246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png
+  artifactKey: Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png using Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cf2c6573a9f05b11d012d5ddae40cc5') in 0.011598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.258818 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png
+  artifactKey: Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/GÓRA miecz.png using Guid(152caa679418b1e4ab0fe27885cc812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe44c0a19b17f76ec8fb0278a88576be') in 0.022711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.052624 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png
+  artifactKey: Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/lewo miecz.png using Guid(4a30d48dc710f6f4b96619843a87d06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a1db9bfcbe1d7241b95db5fa40f1438') in 0.022339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.833528 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png
+  artifactKey: Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/prawo miecz.png using Guid(66ef9b4192652574ba52645acb419bcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e09932533de09b946dbb659defff7b85') in 0.023649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.029552 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png
+  artifactKey: Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/chodzenie/przód miecz.png using Guid(27dcfa6fc64d6ad47a2f5144c6eeec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac7d250ceffc972d326b2cc630c6585') in 0.020436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 79.943099 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png
+  artifactKey: Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/góra walka miecz.png using Guid(c253e0d49b2f9e64c892f95f9c3010ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2c3d8682ea6b64c3eed4f84416f627') in 0.036059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.993720 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png
+  artifactKey: Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png using Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95682fc1a4dc515c4a3a7ae4f2f32690') in 0.034959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.147353 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png
+  artifactKey: Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png using Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41bec3d11366ffe04b81ca7217fb2b70') in 0.029525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.179170 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png
+  artifactKey: Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/przód walka miecz.png using Guid(133572545b88b42458bf57056de9ce7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5cd6362eaf809b2ef3e0bc45d151193') in 0.029939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.826205 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png
+  artifactKey: Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/360 miecz.png using Guid(6a67c5d082408b74b9758dfbd6b0bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeb6f4a3f6a5d1c06f4d7fb48c521f92') in 0.031522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.617591 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Attack
+  artifactKey: Guid(f41cd4de1194d98438472b4d0705e125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Attack using Guid(f41cd4de1194d98438472b4d0705e125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c8389916cc6116f8e0aa3011179055') in 0.006222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.141305 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Abilities/Spin360.anim
+  artifactKey: Guid(99529c47660f16c47bb24a85b0e71e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Abilities/Spin360.anim using Guid(99529c47660f16c47bb24a85b0e71e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e7c6d9ca5f5ab01ec853ab7941a2dc0') in 0.013674 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014160 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.385 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1385ms)
+		BeginReloadAssembly (184ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1135ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (435ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (371ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.07 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3714 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.8 MB.
+System memory in use after: 163.0 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4726.
+Total: 4.823300 ms (FindLiveObjects: 0.445300 ms CreateObjectMapping: 0.123300 ms MarkObjects: 4.198900 ms  DeleteObjects: 0.053900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 297.622252 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackTop.anim
+  artifactKey: Guid(373167c21fa746348b47f812af5c57c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackTop.anim using Guid(373167c21fa746348b47f812af5c57c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f235e9aa6d48e493f321b973599e0816') in 0.021088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.383886 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackLeft.anim
+  artifactKey: Guid(d2b4faadf082fb848bfb1b40fe2297b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackLeft.anim using Guid(d2b4faadf082fb848bfb1b40fe2297b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7614bc69872165ce476e915aa00c6b') in 0.007302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.376030 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackDown.anim
+  artifactKey: Guid(1a6133919e0abed4db6cbc9d5dabb0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackDown.anim using Guid(1a6133919e0abed4db6cbc9d5dabb0b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4008be6eb6560c704580bd39823b4d') in 0.017235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 118.839774 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsWarrior/Movement
+  artifactKey: Guid(d2b54c9a3b576954ba3271cda1cb0187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsWarrior/Movement using Guid(d2b54c9a3b576954ba3271cda1cb0187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '575ae601ab9dc64d0e087ae78ebc3f5d') in 0.007551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.801903 seconds.
+  path: Assets/Graphics/Player/Sprite/normal/prawo PNG.png
+  artifactKey: Guid(9cda5f1c66f954f41bea506e7c8fb087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/normal/prawo PNG.png using Guid(9cda5f1c66f954f41bea506e7c8fb087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e24e9771108dd61aceb6d874f015d2') in 0.058239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.186518 seconds.
+  path: Assets/Graphics/Player/Sprite/normal/GÓRA PNG.png
+  artifactKey: Guid(ecaa70204c1265e45b36165eb8b35e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/normal/GÓRA PNG.png using Guid(ecaa70204c1265e45b36165eb8b35e82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37ca0924343f51ed1b530bafd2b47aad') in 0.029702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.577962 seconds.
+  path: Assets/Graphics/Player/Sprite/normal/lewo PNG.png
+  artifactKey: Guid(c7461c2a01e21314186e8f150506bef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/normal/lewo PNG.png using Guid(c7461c2a01e21314186e8f150506bef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a679ff3219c1605535a6684e3b0aa3b1') in 0.128171 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016703 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.384 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1385ms)
+		BeginReloadAssembly (186ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1130ms)
+			LoadAssemblies (154ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (437ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (376ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (281ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.19 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3704 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.9 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4775.
+Total: 5.501900 ms (FindLiveObjects: 0.456200 ms CreateObjectMapping: 0.170000 ms MarkObjects: 4.828100 ms  DeleteObjects: 0.046100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 50.666677 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Down.anim
+  artifactKey: Guid(8a71c50d13606a74496ebdc57ef9d017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Down.anim using Guid(8a71c50d13606a74496ebdc57ef9d017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5d179cae5fd983af63986cf0cc5920') in 0.019515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 277.173902 seconds.
+  path: Assets/Graphics/Player/Animations/Player.controller
+  artifactKey: Guid(ec03ecff54e7a7e4a92add2d195ea850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/Player.controller using Guid(ec03ecff54e7a7e4a92add2d195ea850) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4181d50b424d54d600bb34f23f1f5e42') in 0.013267 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014094 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.381 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1381ms)
+		BeginReloadAssembly (173ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1139ms)
+			LoadAssemblies (155ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (444ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (373ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (280ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.16 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3701 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.9 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4778.
+Total: 5.177900 ms (FindLiveObjects: 0.406100 ms CreateObjectMapping: 0.136600 ms MarkObjects: 4.589200 ms  DeleteObjects: 0.044200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012798 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.367 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1367ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1118ms)
+			LoadAssemblies (151ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (428ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (370ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.22 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3701 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.9 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4781.
+Total: 4.349600 ms (FindLiveObjects: 0.411500 ms CreateObjectMapping: 0.106100 ms MarkObjects: 3.798900 ms  DeleteObjects: 0.032100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 119.720312 seconds.
+  path: Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackRight.anim
+  artifactKey: Guid(f7d1589f69649c04dafbba49ebe9a718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Animations/AnimationsNormal/Attack/AttackRight.anim using Guid(f7d1589f69649c04dafbba49ebe9a718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5047edb2774e6dc5b49697c94f5dad93') in 0.020984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 135.815507 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png
+  artifactKey: Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/lewo walka miecz.png using Guid(ace601fa65a885844ac4a5b6da98e1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c23cce4188f7347aabf70201c6cb4e4') in 0.079417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.679555 seconds.
+  path: Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png
+  artifactKey: Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Player/Sprite/Warrior/New Sprites/walka/prawo walka miecz.png using Guid(6df38f99faa84f448b1996897ea6a924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e15cf4d9e21ee49560094a0b1206928') in 0.034434 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012432 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.385 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1385ms)
+		BeginReloadAssembly (194ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1122ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (429ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (375ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (281ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.27 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3701 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.7 MB.
+System memory in use after: 164.9 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4813.
+Total: 4.961600 ms (FindLiveObjects: 0.501600 ms CreateObjectMapping: 0.103200 ms MarkObjects: 4.318000 ms  DeleteObjects: 0.037300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 88.109883 seconds.
+  path: Assets/Scripts/Player/PlayerMovement.cs
+  artifactKey: Guid(36dabf41196beaf4383f40dd06323ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerMovement.cs using Guid(36dabf41196beaf4383f40dd06323ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158bcbfeea8ebd6862a018ba640eccec') in 0.016089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.663568 seconds.
+  path: Assets/Scripts/Player/PlayerAbilities.cs
+  artifactKey: Guid(bef48f5a715281e409197e07c89336ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerAbilities.cs using Guid(bef48f5a715281e409197e07c89336ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f957ab8490e3a08f87f2e6c573254eac') in 0.007050 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013111 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projekty\ProjektCyfrowy2D\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.382 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1383ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1129ms)
+			LoadAssemblies (161ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (430ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (374ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (280ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.14 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3701 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.7 MB.
+System memory in use after: 165.0 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 4816.
+Total: 4.762300 ms (FindLiveObjects: 0.401500 ms CreateObjectMapping: 0.111600 ms MarkObjects: 4.207600 ms  DeleteObjects: 0.039500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
