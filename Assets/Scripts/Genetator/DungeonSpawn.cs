@@ -56,7 +56,7 @@ public class DungeonSpawn : MonoBehaviour
         {
             for (int j = 0; j < randomY; j++)
             {
-                GameObject SpawnedRoom = Instantiate(Room, new Vector3(gameObject.transform.position.x + i * 30, gameObject.transform.position.y + j * 20, gameObject.transform.position.z), Quaternion.identity);
+                GameObject SpawnedRoom = Instantiate(Room, new Vector3(gameObject.transform.position.x + i * 26, gameObject.transform.position.y + j * 16, gameObject.transform.position.z), Quaternion.identity);
                 Rooms[i, j] = SpawnedRoom;
                 Rooms[i, j].GetComponent<Room>().Xpos = i;
                 Rooms[i, j].GetComponent<Room>().Ypos = j; 

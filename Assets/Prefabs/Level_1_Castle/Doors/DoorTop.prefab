@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   X: 0
-  Y: 13
+  Y: 7
   RoomsStorage: {fileID: 0}
   RoomObj: {fileID: 0}
   direction: 0
