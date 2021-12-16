@@ -322,11 +322,11 @@ MonoBehaviour:
   playerName: V
   playerMovementSpeed: 5
   playerAttackSpeed: 1
-  playerAttackRange: 0
-  playerAttack: 0
-  playerDefense: 0
-  playerLuck: 0
-  playerHealthPoints: 0
+  playerAttackRange: 1
+  playerAttack: 1
+  playerDefense: 1
+  playerLuck: 1
+  playerHealthPoints: 10
   playerClass: 1
 --- !u!114 &7872051621116711042
 MonoBehaviour:

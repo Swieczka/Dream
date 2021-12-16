@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
     public float playerDefense;
 
     public float playerLuck;
-    public int playerHealthPoints;
+    public float playerHealthPoints;
 
     public PlayerClass playerClass;
     public void LoseHP(int damage)

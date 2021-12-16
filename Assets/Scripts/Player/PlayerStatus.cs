@@ -14,8 +14,10 @@ public class PlayerStatus : MonoBehaviour
         
     }
 
-    public void PlayerHitted()
-    { 
+    public void PlayerHitted(float damage)
+    {
+        float def = gameObject.GetComponent<PlayerStats>().playerDefense;
+        gameObject.GetComponent<PlayerStats>().playerHealthPoints -= damage/def;
         StartCoroutine(PlayerStatusColor("red",0.15f));
     }
 

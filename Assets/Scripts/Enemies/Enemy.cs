@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             GameObject player = collision.collider.gameObject;
-            player.GetComponent<PlayerStatus>().PlayerHitted();
+            player.GetComponent<PlayerStatus>().PlayerHitted(3);
         }
     }
     public void LoseHP(int x)

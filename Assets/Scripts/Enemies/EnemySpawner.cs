@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] Enemies;
     void Start()
     {
-        Instantiate(Enemies[0],transform.position,Quaternion.identity);
+        Instantiate(Enemies[0],transform.position,Quaternion.identity,gameObject.transform.parent.transform);
         Destroy(gameObject);
     }
 }
