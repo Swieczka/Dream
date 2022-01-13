@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawner
+  - Enemy
+  - Key
+  - HealthBar
+  - Ramka
   layers:
   - Default
   - TransparentFX
@@ -41,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemies
+    uniqueID: 2561332539
     locked: 0
   - name: Player
     uniqueID: 1441007893

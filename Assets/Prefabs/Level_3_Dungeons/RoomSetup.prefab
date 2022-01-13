@@ -144,7 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textmp: {fileID: 4232888493387351843}
   RoomsNormal:
-  - {fileID: 1953530289305017829, guid: de64b385c2b0d4943b2224855d1dd8b2, type: 3}
   - {fileID: 1953530289305017829, guid: db1e34ea80980604aabb2cbf81d83672, type: 3}
   - {fileID: 1953530289305017829, guid: 72dcdfd841f41eb40b9b3cc8c7f4a64f, type: 3}
   - {fileID: 1953530289305017829, guid: bcbe64f1ead69a9418f3a5495e3c877f, type: 3}
@@ -160,6 +159,15 @@ MonoBehaviour:
   - {fileID: 1953530289305017829, guid: 449d87156e5b5314e94d208730d0477f, type: 3}
   - {fileID: 1953530289305017829, guid: f7e232b007e2cb343be8008084e59185, type: 3}
   - {fileID: 1953530289305017829, guid: 283e83ad7b3c8cb469ffe1cddd7fb40a, type: 3}
+  - {fileID: 1953530289305017829, guid: c0b56263033dc6946b493abb605fae9c, type: 3}
+  - {fileID: 1953530289305017829, guid: f2bd31a98f7ff8c4dae92bfefdbd7c77, type: 3}
+  - {fileID: 1953530289305017829, guid: db6c428cfbfc6b340afcd4742c58ec88, type: 3}
+  - {fileID: 1953530289305017829, guid: f83b8b26eb9667b4c970d3b7b635ad89, type: 3}
+  - {fileID: 1953530289305017829, guid: fc8f6b2fe497d464d8f4530a7eb090e6, type: 3}
+  - {fileID: 1953530289305017829, guid: 94870cdd85e912a439d5c8e2fa8e073e, type: 3}
+  - {fileID: 1953530289305017829, guid: 3edf53c47ecbf9344a7cac128f611bcc, type: 3}
+  - {fileID: 1953530289305017829, guid: 7984e87643cbda345af5a386e0c76c45, type: 3}
+  - {fileID: 1953530289305017829, guid: 2860def7dc7568b498d73efba4c52914, type: 3}
   RoomsSpecial:
   - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
@@ -189,6 +197,8 @@ MonoBehaviour:
   - {fileID: 6927498748374893241, guid: eb55be1030d76784ebde97361c619ced, type: 3}
   - {fileID: 6927498748374893241, guid: 87efe58cd4e4f914a986016047843e10, type: 3}
   - {fileID: 6927498748374893241, guid: fd294e9347ad75f4aab3170da403b8e2, type: 3}
+  AliveEnemiesInRoom: 0
+  RoomKey: {fileID: 0}
 --- !u!1 &5322878622504414412
 GameObject:
   m_ObjectHideFlags: 0

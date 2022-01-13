@@ -5,7 +5,7 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-     Animator PlayerAnimator;
+    Animator PlayerAnimator;
     [Serializable]
     public class Animators
     {
@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     PlayerStats playerStats;
     void Start()
     {
+        GameObject hpBar = GameObject.FindGameObjectWithTag("HealthBar");
+        hpBar.GetComponent<HealthBar>().Player = gameObject;
+        hpBar.GetComponent<HealthBar>().isPlayerAssigned = true;
         playerStats = GetComponent<PlayerStats>();
         PlayerAnimator = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();

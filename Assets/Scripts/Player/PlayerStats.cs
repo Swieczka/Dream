@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -19,11 +20,12 @@ public class PlayerStats : MonoBehaviour
     public float playerAttackSpeed;
     public float playerAttackRange;
 
-    public float playerAttack;
-    public float playerDefense;
+    public int playerAttack;
+    public int playerDefense;
 
-    public float playerLuck;
-    public float playerHealthPoints;
+    public int playerLuck;
+    public int playerHealthPoints;
+    public int playerMaxHP;
 
     public PlayerClass playerClass;
     public void LoseHP(int damage)
@@ -55,35 +57,39 @@ public class PlayerStats : MonoBehaviour
     }
     private void Start()
     {
-        ChangePlayerClass(PlayerPrefs.GetString("PlayerClass","Default"));
+        ChangePlayerClass("Warrior");
         gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
-        { 
-            ChangePlayerClass("Warrior");
-            gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (playerHealthPoints <= 0)
         {
-            ChangePlayerClass("Mage");
-            gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
+            SceneManager.LoadScene("DeathMenu");
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ChangePlayerClass("Archer");
-            gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            ChangePlayerClass("Default");
-            gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-        }
+        /* if(Input.GetKeyDown(KeyCode.Z))
+         { 
+             ChangePlayerClass("Warrior");
+             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
+         }
+         if (Input.GetKeyDown(KeyCode.X))
+         {
+             ChangePlayerClass("Mage");
+             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
+         }
+         if (Input.GetKeyDown(KeyCode.C))
+         {
+             ChangePlayerClass("Archer");
+             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
+         }
+         if (Input.GetKeyDown(KeyCode.V))
+         {
+             ChangePlayerClass("Default");
+             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
+         }*/
     }
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetString("PlayerClass", "Default");
+        PlayerPrefs.SetString("PlayerClass", "Warrior");
     }
 }

@@ -233,7 +233,7 @@ public class DungeonSpawn : MonoBehaviour
 
         //Utworzenie sklepu
         #region shop
-        readyrooms = 0;
+       /* readyrooms = 0;
         foreach (GameObject room in Rooms)
         {
             if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled && room.GetComponent<Room>().roomType == global::Room.RoomType.Normal)
@@ -257,7 +257,7 @@ public class DungeonSpawn : MonoBehaviour
                 }
             }
         }
-
+       */
         #endregion
         //-------------------------------------------
 

@@ -38,9 +38,17 @@ public class Room : MonoBehaviour
     public bool IsRoomFinished;
     [SerializeField] GameObject[] DoorPositions; // 0-top 1- down 2-left 3-right
     [SerializeField] GameObject[] DoorToSpawn;
+    public int AliveEnemiesInRoom;
+    public GameObject RoomKey;
     void Start()
     {
+        RoomKey = GetComponentInChildren<Room_Button>().gameObject;
         IsRoomFinished = false;
+        if(roomType == RoomType.Spawn)
+        {
+            IsRoomFinished = true;
+            Destroy(RoomKey);
+        }
     }
 
     void Update()
@@ -76,7 +84,7 @@ public class Room : MonoBehaviour
                 ActiveRoom = false;
                 break;
         }
-        textmp.text = distancetospawn.ToString("00");
+     //   textmp.text = distancetospawn.ToString("00");
         DoorSpawn();
     }
     /*

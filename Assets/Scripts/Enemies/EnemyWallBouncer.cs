@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWallBouncer : Enemy
+public class EnemyWallBouncer : MonoBehaviour
 {
     [SerializeField] private float x_speed;
     [SerializeField] private float y_speed;
@@ -12,10 +12,14 @@ public class EnemyWallBouncer : Enemy
     float TimeCheckX;
     float TimeCheckY;
     [SerializeField] float TimeCoolDown = 1f;
+    public bool IsGolden;
+
     void Start()
     {
-        x_speed = 3;
-        y_speed = 3;
+        if(IsGolden)
+        {
+            gameObject.GetComponent<Animator>().SetBool("IsGolden", true);
+        }
         GoUp = RandomStart();
         GoRight = RandomStart();
         rb2d = GetComponent<Rigidbody2D>();
@@ -34,10 +38,12 @@ public class EnemyWallBouncer : Enemy
             if (GoRight)
             {
                 rb2d.velocity = new Vector2(x_speed, y_speed);
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
             else
             {
                 rb2d.velocity = new Vector2(-x_speed, y_speed);
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
         else
@@ -45,10 +51,12 @@ public class EnemyWallBouncer : Enemy
             if (GoRight)
             {
                 rb2d.velocity = new Vector2(x_speed, -y_speed);
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
             else
             {
                 rb2d.velocity = new Vector2(-x_speed, -y_speed);
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
 
@@ -80,13 +88,13 @@ public class EnemyWallBouncer : Enemy
         if (Time.time > TimeCheckY)
         {
             TimeCheckY = Time.time + TimeCoolDown;
-            if (GoUp)
+            if (!GoUp)
             {
-                GoUp = false;
+                GoUp = true;
             }
             else
             {
-                GoUp = true;
+                GoUp = false;
             }
           //  y_speed *= 1.01f;
         }

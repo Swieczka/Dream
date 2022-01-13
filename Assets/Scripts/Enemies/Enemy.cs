@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    int hP;
+    public int enemyHP;
+    public int enemyDamage;
     void Start()
     {
-        hP = 2;
+        Debug.Log("start");
     }
-
     void Update()
     {
-        if(hP<=0)
+        Debug.Log(enemyHP);
+        if (enemyHP < 0)
         {
+            Debug.Log("asd");
             Destroy(gameObject);
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
         {
             GameObject player = collision.collider.gameObject;
-            player.GetComponent<PlayerStatus>().PlayerHitted(3);
+            player.GetComponent<PlayerStatus>().PlayerHitted(enemyDamage);
         }
     }
     public void LoseHP(int x)
     {
-        hP -= x;
+        Debug.Log("oof");
+        enemyHP -= x;
+        //  Destroy(gameObject);
     }
 }

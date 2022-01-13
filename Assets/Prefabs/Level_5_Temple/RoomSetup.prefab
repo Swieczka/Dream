@@ -162,14 +162,6 @@ MonoBehaviour:
   - {fileID: 1953530289305017829, guid: 8c04f0c29d0d9034fae3a91d9a90a9c4, type: 3}
   - {fileID: 1953530289305017829, guid: 83a4be650e694744281a29e7f22a404f, type: 3}
   - {fileID: 1953530289305017829, guid: 058cccbb3b24ae349a791c1f56a5f199, type: 3}
-  - {fileID: 1953530289305017829, guid: 74efc1c3102c80b40ae8b511e8b63341, type: 3}
-  - {fileID: 1953530289305017829, guid: c29c3623008d9ae42847e7b6943dc862, type: 3}
-  - {fileID: 1953530289305017829, guid: 88bd4b31e43af1248be76b881fefe5eb, type: 3}
-  - {fileID: 1953530289305017829, guid: 156bb571c82e0154cb95bb5b227d1b70, type: 3}
-  - {fileID: 1953530289305017829, guid: c10e4504d9f6d30438fd6b08935779d0, type: 3}
-  - {fileID: 1953530289305017829, guid: 2955815ffd3cff4459802405b9f57c29, type: 3}
-  - {fileID: 1953530289305017829, guid: b23e841305af58e4bbdf2e8aeac0f8d9, type: 3}
-  - {fileID: 1953530289305017829, guid: ee7064d5ffdeec84191f93e2c7f71495, type: 3}
   RoomsSpecial:
   - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
@@ -199,6 +191,8 @@ MonoBehaviour:
   - {fileID: 6927498748374893241, guid: eb55be1030d76784ebde97361c619ced, type: 3}
   - {fileID: 6927498748374893241, guid: 87efe58cd4e4f914a986016047843e10, type: 3}
   - {fileID: 6927498748374893241, guid: fd294e9347ad75f4aab3170da403b8e2, type: 3}
+  AliveEnemiesInRoom: 0
+  RoomKey: {fileID: 0}
 --- !u!1 &5322878622504414412
 GameObject:
   m_ObjectHideFlags: 0

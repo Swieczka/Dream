@@ -157,6 +157,8 @@ MonoBehaviour:
   - {fileID: 1953530289305017829, guid: 53fc89ca01edca34a92713418284fed5, type: 3}
   - {fileID: 1953530289305017829, guid: 9e1dcf83417911440abb9f1054c18e26, type: 3}
   - {fileID: 1953530289305017829, guid: f00ddda7a9bd2a14ba36ac7173c3fe46, type: 3}
+  - {fileID: 1953530289305017829, guid: 7367cb60b2ae76644bbe49fec2afc016, type: 3}
+  - {fileID: 1953530289305017829, guid: eec0e490e0eec4d41bcb2f83f2c2ac88, type: 3}
   RoomsSpecial:
   - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
@@ -186,6 +188,8 @@ MonoBehaviour:
   - {fileID: 6927498748374893241, guid: eb55be1030d76784ebde97361c619ced, type: 3}
   - {fileID: 6927498748374893241, guid: 87efe58cd4e4f914a986016047843e10, type: 3}
   - {fileID: 6927498748374893241, guid: fd294e9347ad75f4aab3170da403b8e2, type: 3}
+  AliveEnemiesInRoom: 0
+  RoomKey: {fileID: 0}
 --- !u!1 &5322878622504414412
 GameObject:
   m_ObjectHideFlags: 0

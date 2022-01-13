@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1441007893
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cacf3da5a50608347b356f0ebee4ff7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6039216}
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90adbf5e8ad389b4fb4ff05de4b94184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 6343079516181306867}
 --- !u!1 &6343079516181306867
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1441007893
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -4874539362594931328, guid: 6a1035a9b32d2374b8bde31131a6c6c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -261,7 +262,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6343079516181306867}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -323,10 +324,11 @@ MonoBehaviour:
   playerMovementSpeed: 5
   playerAttackSpeed: 1
   playerAttackRange: 1
-  playerAttack: 1
+  playerAttack: 10
   playerDefense: 1
   playerLuck: 1
-  playerHealthPoints: 10
+  playerHealthPoints: 100
+  playerMaxHP: 100
   playerClass: 1
 --- !u!114 &7872051621116711042
 MonoBehaviour:

@@ -182,6 +182,8 @@ MonoBehaviour:
   - {fileID: 6927498748374893241, guid: eb55be1030d76784ebde97361c619ced, type: 3}
   - {fileID: 6927498748374893241, guid: 87efe58cd4e4f914a986016047843e10, type: 3}
   - {fileID: 6927498748374893241, guid: fd294e9347ad75f4aab3170da403b8e2, type: 3}
+  AliveEnemiesInRoom: 0
+  RoomKey: {fileID: 0}
 --- !u!1 &5322878622504414412
 GameObject:
   m_ObjectHideFlags: 0
