@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerStats : MonoBehaviour
 {
     public enum PlayerClass
@@ -13,10 +14,11 @@ public class PlayerStats : MonoBehaviour
         Mage,
         Archer
     }
-
+    
     public string playerName;
 
     public float playerMovementSpeed;
+    public float playerStartSpeed;
     public float playerAttackSpeed;
     public float playerAttackRange;
 
@@ -28,6 +30,8 @@ public class PlayerStats : MonoBehaviour
     public int playerMaxHP;
 
     public PlayerClass playerClass;
+
+    
     public void LoseHP(int damage)
     {
         playerHealthPoints -= damage;
@@ -57,7 +61,10 @@ public class PlayerStats : MonoBehaviour
     }
     private void Start()
     {
+        playerStartSpeed = playerMovementSpeed;
+        playerHealthPoints = PlayerPrefs.GetInt("PlayerHP", 100);
         ChangePlayerClass("Warrior");
+        ChangeAttackSpeed();
         gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
     }
     private void Update()
@@ -66,30 +73,16 @@ public class PlayerStats : MonoBehaviour
         {
             SceneManager.LoadScene("DeathMenu");
         }
-        /* if(Input.GetKeyDown(KeyCode.Z))
-         { 
-             ChangePlayerClass("Warrior");
-             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-         }
-         if (Input.GetKeyDown(KeyCode.X))
-         {
-             ChangePlayerClass("Mage");
-             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-         }
-         if (Input.GetKeyDown(KeyCode.C))
-         {
-             ChangePlayerClass("Archer");
-             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-         }
-         if (Input.GetKeyDown(KeyCode.V))
-         {
-             ChangePlayerClass("Default");
-             gameObject.GetComponent<PlayerMovement>().ChangePlayerClass();
-         }*/
     }
 
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetString("PlayerClass", "Warrior");
+    }
+
+    public void ChangeAttackSpeed()
+    {
+        Animator anim = gameObject.GetComponent<Animator>();
+        anim.SetFloat("AttackSpeed", playerAttackSpeed);
     }
 }

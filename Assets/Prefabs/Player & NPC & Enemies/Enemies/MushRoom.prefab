@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8232334097957513453}
   - component: {fileID: 1700955945055754525}
-  - component: {fileID: -7891766001718743957}
   - component: {fileID: 2746050764391265789}
   - component: {fileID: 6745625048264227040}
   - component: {fileID: 3870611571556746415}
@@ -88,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7891766001718743957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222909841745300679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ece502fcda0fc149912eb7ad9b60c54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHP: 30
-  enemyDamage: 10
-  RoomObj: {fileID: 0}
 --- !u!50 &2746050764391265789
 Rigidbody2D:
   serializedVersion: 4
@@ -189,6 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5891bd23ce8687f4a89547585ef4de37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHP: 30
+  enemyDamage: 8
+  RoomObj: {fileID: 0}
   cooldoown: 1
   timercooldown: 0
   ball: {fileID: 8561690442719636640, guid: 067723a7a6d9e314a82eda80ce5ce4b3, type: 3}
+  directionindex: 0

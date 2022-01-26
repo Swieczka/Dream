@@ -9,7 +9,8 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public TMP_Text healthText;
     public GameObject Player;
-    public bool isPlayerAssigned; 
+    public bool isPlayerAssigned;
+    public bool IsPlayer;
     void Start()
     {
        
@@ -19,7 +20,14 @@ public class HealthBar : MonoBehaviour
     {
         if (isPlayerAssigned)
         {
-            SetHealth(Player.GetComponent<PlayerStats>().playerHealthPoints, Player.GetComponent<PlayerStats>().playerMaxHP);
+            if (IsPlayer)
+            {
+                SetHealth(Player.GetComponent<PlayerStats>().playerHealthPoints, Player.GetComponent<PlayerStats>().playerMaxHP);
+            }
+            else
+            {
+                SetHealth(Player.GetComponent<BossScript>().enemyHP, Player.GetComponent<BossScript>().enemyMaxHP);
+            }
         }
     }
 

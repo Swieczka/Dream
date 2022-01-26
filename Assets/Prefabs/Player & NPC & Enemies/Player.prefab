@@ -322,10 +322,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: V
   playerMovementSpeed: 5
-  playerAttackSpeed: 1
+  playerAttackSpeed: 0.9
   playerAttackRange: 1
   playerAttack: 10
-  playerDefense: 1
+  playerDefense: 2
   playerLuck: 1
   playerHealthPoints: 100
   playerMaxHP: 100

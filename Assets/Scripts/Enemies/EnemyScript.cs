@@ -6,27 +6,26 @@ public class EnemyScript : MonoBehaviour
 {
     public int enemyHP;
     public int enemyDamage;
-    [SerializeField] Room RoomObj;
-    void Start()
+    [SerializeField] protected Room RoomObj;
+
+    private void Awake()
     {
         RoomObj = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Room>();
         RoomObj.AliveEnemiesInRoom += 1;
     }
-    void Update()
+    void Start()
+    {
+        
+    }
+     void Update()
     {
         if (enemyHP <= 0)
         {
-            RoomObj.AliveEnemiesInRoom -= 1;
-            if(RoomObj.AliveEnemiesInRoom <=0)
-            {
-                RoomObj.IsRoomFinished = true;
-                Destroy(RoomObj.RoomKey);
-            }
-            Destroy(gameObject);
+            EnemyDeath();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
         {
@@ -34,12 +33,12 @@ public class EnemyScript : MonoBehaviour
             player.GetComponent<PlayerStatus>().PlayerHitted(enemyDamage);
         }
     }
-    public void LoseHP(int x)
+    public virtual void LoseHP(int x)
     {
         enemyHP -= x;
         StartCoroutine(EnemyStatusColor("red", 0.15f));
     }
-    IEnumerator EnemyStatusColor(string colorname, float time)
+    protected IEnumerator EnemyStatusColor(string colorname, float time)
     {
         switch (colorname)
         {
@@ -49,5 +48,16 @@ public class EnemyScript : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(time);
         gameObject.GetComponent<Renderer>().material.color = Color.white;
+    }
+
+    protected void EnemyDeath()
+    {
+            RoomObj.AliveEnemiesInRoom -= 1;
+        if (RoomObj.AliveEnemiesInRoom <= 0)
+        {
+            RoomObj.IsRoomFinished = true;
+            Destroy(RoomObj.RoomKey);
+        }
+        Destroy(gameObject);
     }
 }

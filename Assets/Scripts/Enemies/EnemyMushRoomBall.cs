@@ -6,33 +6,49 @@ public class EnemyMushRoomBall : MonoBehaviour
 {
     public int ballDamage;
     public int direction;
-    void Start()
+    public int speed;
+    public bool ballup;
+    Rigidbody2D rb;
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
-
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         switch(direction)
         {
             case 1:
-                gameObject.transform.position += Vector3.left * 0.1f;
+                rb.velocity = Vector2.left * speed;
+                transform.rotation = Quaternion.Euler(0, 0, -90);
                 break;
             case 2:
-                gameObject.transform.position += Vector3.down * 0.1f;
+                rb.velocity = new Vector2(-2, -1).normalized * speed;
+                transform.rotation = Quaternion.Euler(0, 0, -45);
                 break;
             case 3:
-                gameObject.transform.position += Vector3.left * -0.1f;
+                rb.velocity = Vector2.down * speed;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 break;
             case 4:
-                gameObject.transform.position += Vector3.down * -0.1f;
+                rb.velocity = new Vector2(2, -1).normalized * speed;
+                transform.rotation = Quaternion.Euler(0, 0, 45);
                 break;
-
+            case 5:
+                rb.velocity = Vector2.right * speed;
+                transform.rotation = Quaternion.Euler(0, 0, 90);
+                break;
+            case 6:
+                rb.velocity = new Vector2(2, 1).normalized * speed;
+                transform.rotation = Quaternion.Euler(0, 0, 135);
+                break;
+            case 7:
+                transform.rotation = Quaternion.Euler(0, 0, 180);
+                rb.velocity = Vector2.up * speed;
+                break;
+            case 8:
+                transform.rotation = Quaternion.Euler(0, 0, -135);
+                rb.velocity = new Vector2(-2, 1).normalized * speed;
+                break;
         }
 
     }
@@ -43,6 +59,10 @@ public class EnemyMushRoomBall : MonoBehaviour
         {
             GameObject player = collision.collider.gameObject;
             player.GetComponent<PlayerStatus>().PlayerHitted(ballDamage);
+            if (ballup)
+            {
+                player.GetComponent<PlayerStatus>().Slowed();
+            }
             Destroy(gameObject);
         }
         if (collision.collider.tag == "Ramka")

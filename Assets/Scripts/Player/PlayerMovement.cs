@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     {
         GameObject hpBar = GameObject.FindGameObjectWithTag("HealthBar");
         hpBar.GetComponent<HealthBar>().Player = gameObject;
+        hpBar.GetComponent<HealthBar>().IsPlayer = true;
         hpBar.GetComponent<HealthBar>().isPlayerAssigned = true;
         playerStats = GetComponent<PlayerStats>();
         PlayerAnimator = gameObject.GetComponent<Animator>();

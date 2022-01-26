@@ -171,7 +171,7 @@ MonoBehaviour:
   RoomsSpecial:
   - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
-  - {fileID: 1953530289305017829, guid: 40b3f3f81c7ad934fb54d53e69a24df7, type: 3}
+  - {fileID: 1953530289305017829, guid: d24b5e1e3ab559047bc8848205887de5, type: 3}
   roomType: 0
   roomActiveness: 0
   Xpos: 0

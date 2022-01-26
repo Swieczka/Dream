@@ -229,6 +229,8 @@ public class DungeonSpawn : MonoBehaviour
             }
         }
         Rooms[bossX, bossY].GetComponent<Room>().roomType = global::Room.RoomType.Boss;
+        Rooms[bossX, bossY].tag = "BossRoom";
+        Rooms[bossX, bossY].GetComponent<Room>().RoomKey = null;
         #endregion
 
         //Utworzenie sklepu

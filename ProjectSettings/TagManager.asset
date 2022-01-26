@@ -9,6 +9,9 @@ TagManager:
   - Key
   - HealthBar
   - Ramka
+  - BossRoom
+  - Boss
+  - BossHPBar
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWallBouncer : MonoBehaviour
+public class EnemyWallBouncer : EnemyScript
 {
     [SerializeField] private float x_speed;
     [SerializeField] private float y_speed;
@@ -27,10 +27,6 @@ public class EnemyWallBouncer : MonoBehaviour
         TimeCheckY = Time.time;
     }
 
-    void Update()
-    {
-        
-    }
     private void FixedUpdate()
     {
         if (GoUp)
@@ -61,9 +57,13 @@ public class EnemyWallBouncer : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.collider.tag == "Player")
+        {
+            GameObject player = collision.collider.gameObject;
+            player.GetComponent<PlayerStatus>().PlayerHitted(enemyDamage);
+        }
         foreach (ContactPoint2D hitpos in collision.contacts)
             {
                 // Debug.Log(hitpos.normal);

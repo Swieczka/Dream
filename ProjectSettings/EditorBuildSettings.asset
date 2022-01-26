@@ -7,43 +7,25 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
-    guid: aadbdd3ab9855024c84d41d9bbbcba0f
+    guid: 65fdecbe6aa1e914a8382b6ac043e87d
   - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level_1 1.unity
-    guid: 1d85889e985ebff47a024e63454f51a8
-  - enabled: 1
     path: Assets/Scenes/Level_2.unity
     guid: 892b2fe67cc30424f92d2605e3b7b91b
-  - enabled: 1
-    path: Assets/Scenes/Level_2 1.unity
-    guid: 3e32ce3fa02aa2a41973fef144707698
-  - enabled: 1
-    path: Assets/Scenes/Level_2 2.unity
-    guid: c9cf7e842a6e0c244bde61a543fc4d12
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: ba089d0d02e949b4bb0f212631ca48b5
   - enabled: 1
-    path: Assets/Scenes/Level_3 1.unity
-    guid: fd0b1575a500d39499c3664d1c805ace
-  - enabled: 1
-    path: Assets/Scenes/Level_3 2.unity
-    guid: d9c3d7bdffe82d14dab03c43ede8262c
-  - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: 22e601882d861e549ace30795210950b
   - enabled: 1
-    path: Assets/Scenes/Level_4 1.unity
-    guid: 57f89d5bc20a48c469b0f215c067a887
-  - enabled: 1
-    path: Assets/Scenes/Level_4 2.unity
-    guid: 1107b3c623560584689a0543a579ae0d
-  - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: 9f7403c84c9c05e449f7d3c320398f9e
+  - enabled: 1
+    path: Assets/Scenes/WinMenu.unity
+    guid: fb1ea91023b3e834d865fc324c1b1b6d
   - enabled: 1
     path: Assets/Scenes/DeathMenu.unity
     guid: 543c619a422441c4eb1a75899d30659a
