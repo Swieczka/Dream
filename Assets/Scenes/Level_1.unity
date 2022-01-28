@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404052392}
   - component: {fileID: 1404052391}
+  - component: {fileID: 1404052393}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Spawner
@@ -251,6 +252,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404052393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404052390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd9f9f5ed864d4591b987eef3a76ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StageIndex: 1
 --- !u!1 &1438574910
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,9 +422,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1431291192370018628, guid: 35df9395a859a8d4787ebeda0fb726ed, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1431291192370018630, guid: 35df9395a859a8d4787ebeda0fb726ed, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323088306648796030, guid: 35df9395a859a8d4787ebeda0fb726ed, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323088306648796030, guid: 35df9395a859a8d4787ebeda0fb726ed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256106019018299358, guid: 35df9395a859a8d4787ebeda0fb726ed, type: 3}
       propertyPath: m_AnchorMax.x

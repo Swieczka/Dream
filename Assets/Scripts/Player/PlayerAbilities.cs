@@ -14,6 +14,7 @@ public class PlayerAbilities : MonoBehaviour
     public GameObject SpinBTN;
     public GameObject GoldenSkinBTN;
     public GameObject ChargeBTN;
+    public PlayerStats playerStats;
     void Start()
     {
         ChargeBTN = GameObject.Find("ChargeButton");
@@ -65,11 +66,11 @@ public class PlayerAbilities : MonoBehaviour
         {
             case PlayerStats.PlayerClass.Warrior:
                 ability_1_cooldown = 0f;
-                ability_1_cooldown_def = 12f;
+                ability_1_cooldown_def = 12f - playerStats.CooldownReduction;
                 ability_2_cooldown = 0f;
-                ability_2_cooldown_def = 15f;
+                ability_2_cooldown_def = 15f - playerStats.CooldownReduction;
                 ability_3_cooldown = 0f;
-                ability_3_cooldown_def = 11f;
+                ability_3_cooldown_def = 11f - playerStats.CooldownReduction;
                 break;
         }
     }
@@ -139,20 +140,20 @@ public class PlayerAbilities : MonoBehaviour
     IEnumerator GoldenSkin()
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0.85f, 0.55f, 0.25f, 1f);
-        gameObject.GetComponent<PlayerStats>().playerDefense += 10;
+        gameObject.GetComponent<PlayerStats>().playerDefense += 100;
         yield return new WaitForSeconds(2f);
-        gameObject.GetComponent<PlayerStats>().playerDefense -= 10;
+        gameObject.GetComponent<PlayerStats>().playerDefense -= 100;
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     IEnumerator Charge()
     {
         gameObject.GetComponent<PlayerStats>().playerAttack += 5;
-        gameObject.GetComponent<PlayerStats>().playerMovementSpeed += 3;
+        gameObject.GetComponent<PlayerStats>().playerMovementSpeedPlus += 3;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0.9528302f, 0.09406522f, 0.08539513f, 1f);
         yield return new WaitForSeconds(5f);
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        gameObject.GetComponent<PlayerStats>().playerMovementSpeed -= 3;
+        gameObject.GetComponent<PlayerStats>().playerMovementSpeedPlus -= 3 ;
         gameObject.GetComponent<PlayerStats>().playerAttack -= 5;
     }
 }

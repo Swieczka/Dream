@@ -142,10 +142,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: 1
   enemyDamage: 0
+  enemyEXP: 25
+  isActive: 0
+  player: {fileID: 0}
   RoomObj: {fileID: 0}
   StageIndex: 0
   actionIndex: 0
   maxActionIndex: 0
+  powerShotIndex: 0
   portal: {fileID: 0}
   ShootingBall: {fileID: 8561690442719636640, guid: a70149b024455ca44b648f5c43559acd, type: 3}
   hpBar: {fileID: 0}

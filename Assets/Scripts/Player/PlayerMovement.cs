@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
     Vector2 moveDirection;
     PlayerStats playerStats;
+    float movementSpeed;
     void Start()
     {
         GameObject hpBar = GameObject.FindGameObjectWithTag("HealthBar");
@@ -82,7 +83,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb2d.velocity = new Vector2(moveDirection.x * playerStats.playerMovementSpeed, moveDirection.y * playerStats.playerMovementSpeed);
+        movementSpeed = playerStats.playerMovementSpeed + playerStats.playerMovementSpeedPlus - playerStats.playerMovementSpeedMinus;
+        if(movementSpeed < 0)
+        {
+            movementSpeed = 0;
+        }
+        rb2d.velocity = new Vector2(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed);
     }
 
     public void ChangePlayerClass()

@@ -127,11 +127,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: 30
   enemyDamage: 8
+  enemyEXP: 1
+  isActive: 0
+  player: {fileID: 0}
   RoomObj: {fileID: 0}
   x_speed: 3
   y_speed: 3
   GoUp: 0
   GoRight: 0
+  IsSlowed: 0
   TimeCoolDown: 1
   IsGolden: 0
 --- !u!50 &617961647366422005

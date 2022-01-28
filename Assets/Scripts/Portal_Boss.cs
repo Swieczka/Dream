@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Portal_Boss : MonoBehaviour
 {
     [SerializeField] Room RoomObj;
-    public int nextStage;
+ //   public int nextStage;
     void Start()
     {
         RoomObj = gameObject.transform.parent.parent.gameObject.GetComponent<Room>();
@@ -21,8 +21,9 @@ public class Portal_Boss : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && RoomObj.IsRoomFinished)
         {
-            PlayerPrefs.SetInt("PlayerHP", collision.gameObject.GetComponent<PlayerStats>().playerHealthPoints);
-            PlayerPrefs.SetInt("BossStage", nextStage);
+            collision.gameObject.GetComponent<PlayerStats>().SaveDataOnLevel();
+            
+            //   PlayerPrefs.SetInt("BossStage", nextStage);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }

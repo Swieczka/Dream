@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject opt;
     public GameObject main;
     public void ChangeScene(int x)
     {
@@ -15,22 +14,19 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         main.SetActive(true);
-        opt.SetActive(false);
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("BossStage", 1);
         PlayerPrefs.SetInt("PlayerHP", 100);
     }
 
-    public void Options()
+    public void OpenSection(GameObject obj)
     {
-        opt.SetActive(true);
-        main.SetActive(false);
+        obj.SetActive(true);
     }
 
-    public void OptionsBack()
+    public void CloseSection(GameObject obj)
     {
-        opt.SetActive(false);
-        main.SetActive(true);
+        obj.SetActive(false);
     }
 
     public void ExitGame()

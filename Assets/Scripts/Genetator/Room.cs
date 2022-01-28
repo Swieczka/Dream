@@ -36,6 +36,7 @@ public class Room : MonoBehaviour
     public GameObject RoomCamera;
     public bool ActiveRoom;
     public bool IsRoomFinished;
+    public bool IsRoomActive;
     [SerializeField] GameObject[] DoorPositions; // 0-top 1- down 2-left 3-right
     [SerializeField] GameObject[] DoorToSpawn;
     public int AliveEnemiesInRoom;

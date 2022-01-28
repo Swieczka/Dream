@@ -7,8 +7,7 @@ public class Room_Button : MonoBehaviour
     [SerializeField] Room RoomObj;
     void Start()
     {
-        gameObject.transform.position += new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f));
-        RoomObj = gameObject.transform.parent.gameObject.GetComponent<Room>();
+        RoomObj = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Room>();
         if(RoomObj.tag=="BossRoom")
         {
             Destroy(gameObject);

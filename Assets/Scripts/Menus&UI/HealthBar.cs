@@ -35,6 +35,6 @@ public class HealthBar : MonoBehaviour
     {
         slider.maxValue = maxhealth;
         slider.value = health;
-        healthText.text = health.ToString();
+        healthText.text = "PZ:"+health.ToString();
     }
 }

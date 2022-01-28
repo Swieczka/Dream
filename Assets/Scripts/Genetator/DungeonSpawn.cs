@@ -20,11 +20,11 @@ public class DungeonSpawn : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+       /* if(Input.GetKeyDown(KeyCode.R))
         {
             DestroyDungeon();
             SpawnDungeon();
-        }
+        }*/
     }
 
     void DestroyDungeon()
@@ -170,7 +170,6 @@ public class DungeonSpawn : MonoBehaviour
         #region neighbours
         foreach (GameObject room in Rooms)
         {
-            //room.GetComponent<Room>().CreateRoom();
             if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled)
             {
                 int x = room.GetComponent<Room>().Xpos;
@@ -233,35 +232,6 @@ public class DungeonSpawn : MonoBehaviour
         Rooms[bossX, bossY].GetComponent<Room>().RoomKey = null;
         #endregion
 
-        //Utworzenie sklepu
-        #region shop
-       /* readyrooms = 0;
-        foreach (GameObject room in Rooms)
-        {
-            if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled && room.GetComponent<Room>().roomType == global::Room.RoomType.Normal)
-            {
-                readyrooms++;
-            }
-        }
-        int randomshop = Random.Range(1, readyrooms + 1);
-        foreach (GameObject room in Rooms)
-        {
-            if (room.GetComponent<Room>().roomActiveness == global::Room.RoomActiveness.Filled && room.GetComponent<Room>().roomType == global::Room.RoomType.Normal)
-            {
-                if (randomshop == 1)
-                {
-                    room.GetComponent<Room>().roomType = global::Room.RoomType.Shop;
-                    break;
-                }
-                else
-                {
-                    randomshop -= 1;
-                }
-            }
-        }
-       */
-        #endregion
-        //-------------------------------------------
 
         //czyszczenie œmieci
         #region garbage
@@ -297,12 +267,6 @@ public class DungeonSpawn : MonoBehaviour
         {
            
             Rooms[x, y].GetComponent<Room>().distancestospawn[0] = distance;
-          /*  if (distance > maxdistance)
-            {
-                maxdistance = distance;
-                bossX = x;
-                bossY = y;
-            } */
             distance += 1;
             
             Rooms[x, y].GetComponent<Room>().distancechecked = true;
@@ -344,12 +308,6 @@ public class DungeonSpawn : MonoBehaviour
         {
 
             Rooms[x, y].GetComponent<Room>().distancestospawn[1] = distance;
-            /*  if (distance > maxdistance)
-              {
-                  maxdistance = distance;
-                  bossX = x;
-                  bossY = y;
-              } */
             distance += 1;
 
             Rooms[x, y].GetComponent<Room>().distancechecked = false;
@@ -392,12 +350,6 @@ public class DungeonSpawn : MonoBehaviour
         {
 
             Rooms[x, y].GetComponent<Room>().distancestospawn[2] = distance;
-            /*  if (distance > maxdistance)
-              {
-                  maxdistance = distance;
-                  bossX = x;
-                  bossY = y;
-              } */
             distance += 1;
 
             Rooms[x, y].GetComponent<Room>().distancechecked = true;
@@ -441,12 +393,6 @@ public class DungeonSpawn : MonoBehaviour
         {
 
             Rooms[x, y].GetComponent<Room>().distancestospawn[3] = distance;
-            /*  if (distance > maxdistance)
-              {
-                  maxdistance = distance;
-                  bossX = x;
-                  bossY = y;
-              } */
             distance += 1;
 
             Rooms[x, y].GetComponent<Room>().distancechecked = false;

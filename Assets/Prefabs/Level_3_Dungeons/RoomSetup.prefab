@@ -145,31 +145,8 @@ MonoBehaviour:
   textmp: {fileID: 4232888493387351843}
   RoomsNormal:
   - {fileID: 1953530289305017829, guid: db1e34ea80980604aabb2cbf81d83672, type: 3}
-  - {fileID: 1953530289305017829, guid: 72dcdfd841f41eb40b9b3cc8c7f4a64f, type: 3}
-  - {fileID: 1953530289305017829, guid: bcbe64f1ead69a9418f3a5495e3c877f, type: 3}
-  - {fileID: 1953530289305017829, guid: 254c7650824cfa74494e0942da7e93ec, type: 3}
-  - {fileID: 1953530289305017829, guid: 5d8e8c91972d3f144aa431472751e00c, type: 3}
-  - {fileID: 1953530289305017829, guid: 00e188b1368b8294492965c1d4e891e6, type: 3}
-  - {fileID: 1953530289305017829, guid: 708626f759b4d66449c4e0848635ff3e, type: 3}
-  - {fileID: 1953530289305017829, guid: 85323bfef3998a349a9cf89647d81a97, type: 3}
-  - {fileID: 1953530289305017829, guid: 82ff4423ed5654946b7957e401af792f, type: 3}
-  - {fileID: 1953530289305017829, guid: a5d7984648d4b0d49b335781c34a2855, type: 3}
-  - {fileID: 1953530289305017829, guid: ce06a107aeb550b4993787dce7f5c481, type: 3}
-  - {fileID: 1953530289305017829, guid: ba348b4b3dde1334bb4244e7a9e872e0, type: 3}
-  - {fileID: 1953530289305017829, guid: 449d87156e5b5314e94d208730d0477f, type: 3}
-  - {fileID: 1953530289305017829, guid: f7e232b007e2cb343be8008084e59185, type: 3}
-  - {fileID: 1953530289305017829, guid: 283e83ad7b3c8cb469ffe1cddd7fb40a, type: 3}
-  - {fileID: 1953530289305017829, guid: c0b56263033dc6946b493abb605fae9c, type: 3}
-  - {fileID: 1953530289305017829, guid: f2bd31a98f7ff8c4dae92bfefdbd7c77, type: 3}
-  - {fileID: 1953530289305017829, guid: db6c428cfbfc6b340afcd4742c58ec88, type: 3}
-  - {fileID: 1953530289305017829, guid: f83b8b26eb9667b4c970d3b7b635ad89, type: 3}
-  - {fileID: 1953530289305017829, guid: fc8f6b2fe497d464d8f4530a7eb090e6, type: 3}
-  - {fileID: 1953530289305017829, guid: 94870cdd85e912a439d5c8e2fa8e073e, type: 3}
-  - {fileID: 1953530289305017829, guid: 3edf53c47ecbf9344a7cac128f611bcc, type: 3}
-  - {fileID: 1953530289305017829, guid: 7984e87643cbda345af5a386e0c76c45, type: 3}
-  - {fileID: 1953530289305017829, guid: 2860def7dc7568b498d73efba4c52914, type: 3}
   RoomsSpecial:
-  - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
+  - {fileID: 1953530289305017829, guid: ec61d7ab67803bd4da5713191c4cae4d, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
   - {fileID: 1953530289305017829, guid: d24b5e1e3ab559047bc8848205887de5, type: 3}
   roomType: 0
@@ -187,6 +164,7 @@ MonoBehaviour:
   RoomCamera: {fileID: 8454874453707452908}
   ActiveRoom: 0
   IsRoomFinished: 0
+  IsRoomActive: 0
   DoorPositions:
   - {fileID: 2951685238824188666}
   - {fileID: 5322878622504414412}
@@ -441,6 +419,7 @@ GameObject:
   - component: {fileID: 3921813012696394200}
   - component: {fileID: 5887566880371377065}
   - component: {fileID: 1258353851616703222}
+  - component: {fileID: 6714034427129539547}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -513,6 +492,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454874453707452908}
   m_Enabled: 0
+--- !u!114 &6714034427129539547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454874453707452908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d11a37e5b6b7c48be1669dffcdff93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8010836268008621024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -567,6 +558,10 @@ PrefabInstance:
     - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}

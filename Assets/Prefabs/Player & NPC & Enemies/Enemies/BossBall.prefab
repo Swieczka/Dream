@@ -135,6 +135,7 @@ MonoBehaviour:
   ballDamage: 10
   direction: 1
   speed: 7
+  ballup: 0
 --- !u!50 &8426548971087082588
 Rigidbody2D:
   serializedVersion: 4

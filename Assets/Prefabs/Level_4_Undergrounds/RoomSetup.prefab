@@ -145,16 +145,8 @@ MonoBehaviour:
   textmp: {fileID: 4232888493387351843}
   RoomsNormal:
   - {fileID: 1953530289305017829, guid: fdbd725b0326ec44f86d1c827fc0db35, type: 3}
-  - {fileID: 1953530289305017829, guid: 25a49924d8b816344a577d2ada070fa2, type: 3}
-  - {fileID: 1953530289305017829, guid: c6c7f36f6a8b666469aa3b81dadf1460, type: 3}
-  - {fileID: 1953530289305017829, guid: 945d7e962532ba744847646dee89770c, type: 3}
-  - {fileID: 1953530289305017829, guid: 4363c77a5976d664483641cd507944f3, type: 3}
-  - {fileID: 1953530289305017829, guid: a828da93ae257ac47916482898727c61, type: 3}
-  - {fileID: 1953530289305017829, guid: dab999b02d5bdf040bad2bed30395f82, type: 3}
-  - {fileID: 1953530289305017829, guid: d5267a2f9a54bf845ad49ddf114644b9, type: 3}
-  - {fileID: 1953530289305017829, guid: 0660b29b2d04a7144b7cb192092b8c22, type: 3}
   RoomsSpecial:
-  - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
+  - {fileID: 1953530289305017829, guid: 5c7cfdb167c48124989fa73550080625, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
   - {fileID: 1953530289305017829, guid: a3e9dcaa508c6f04f81d0d000bc3727d, type: 3}
   roomType: 0
@@ -172,6 +164,7 @@ MonoBehaviour:
   RoomCamera: {fileID: 8454874453707452908}
   ActiveRoom: 0
   IsRoomFinished: 0
+  IsRoomActive: 0
   DoorPositions:
   - {fileID: 2951685238824188666}
   - {fileID: 5322878622504414412}
@@ -426,6 +419,7 @@ GameObject:
   - component: {fileID: 3921813012696394200}
   - component: {fileID: 5887566880371377065}
   - component: {fileID: 1258353851616703222}
+  - component: {fileID: 2292375313053716216}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -498,6 +492,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454874453707452908}
   m_Enabled: 0
+--- !u!114 &2292375313053716216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454874453707452908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d11a37e5b6b7c48be1669dffcdff93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4527090103480847996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,6 +620,10 @@ PrefabInstance:
     - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}

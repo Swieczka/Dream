@@ -20,6 +20,14 @@ public class Weapon : MonoBehaviour
             {
                 HitDamage *= 2;
             }
+            if(player.GetComponent<PlayerStats>().IsSlowing)
+            {
+                if (!collision.gameObject.GetComponent<EnemyScript>().IsSlowed)
+                {
+                    collision.gameObject.GetComponent<EnemyScript>().IsSlowed = true;
+                    collision.gameObject.GetComponent<EnemyScript>().Slowed();
+                }
+            }
             collision.gameObject.GetComponent<EnemyScript>().LoseHP(HitDamage);
         }
     }

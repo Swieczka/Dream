@@ -145,17 +145,6 @@ MonoBehaviour:
   textmp: {fileID: 4232888493387351843}
   RoomsNormal:
   - {fileID: 1953530289305017829, guid: 7f141be2642360a4794eb8e1eecbd41c, type: 3}
-  - {fileID: 1953530289305017829, guid: 086fc20e27f94cd4f9bfe4c1e2bd30dc, type: 3}
-  - {fileID: 1953530289305017829, guid: 2e6ba5f25426f9e4aa1008b4b19452bd, type: 3}
-  - {fileID: 1953530289305017829, guid: 9d14487d658a644488f7695775b1fb96, type: 3}
-  - {fileID: 1953530289305017829, guid: ceb7e9a109c731d458f1582722a84be9, type: 3}
-  - {fileID: 1953530289305017829, guid: 098c01683a765914395d57c023d5c55b, type: 3}
-  - {fileID: 1953530289305017829, guid: d072fa0289035034cae0595231461801, type: 3}
-  - {fileID: 1953530289305017829, guid: 7d04b5093df7d96498ff19676731fc47, type: 3}
-  - {fileID: 1953530289305017829, guid: fdb4f8690a0124b4dbc127421b450818, type: 3}
-  - {fileID: 1953530289305017829, guid: a6935b66f24eba74ba14aa9efcc96357, type: 3}
-  - {fileID: 1953530289305017829, guid: 4541786ecc253624e99c0598363098f3, type: 3}
-  - {fileID: 1953530289305017829, guid: 2619eec58f23a544f8ea81f423941b0e, type: 3}
   RoomsSpecial:
   - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
@@ -175,6 +164,7 @@ MonoBehaviour:
   RoomCamera: {fileID: 8454874453707452908}
   ActiveRoom: 0
   IsRoomFinished: 0
+  IsRoomActive: 0
   DoorPositions:
   - {fileID: 2951685238824188666}
   - {fileID: 5322878622504414412}
@@ -185,6 +175,8 @@ MonoBehaviour:
   - {fileID: 6927498748374893241, guid: eb55be1030d76784ebde97361c619ced, type: 3}
   - {fileID: 6927498748374893241, guid: 87efe58cd4e4f914a986016047843e10, type: 3}
   - {fileID: 6927498748374893241, guid: fd294e9347ad75f4aab3170da403b8e2, type: 3}
+  AliveEnemiesInRoom: 0
+  RoomKey: {fileID: 0}
 --- !u!1 &5322878622504414412
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +419,7 @@ GameObject:
   - component: {fileID: 3921813012696394200}
   - component: {fileID: 5887566880371377065}
   - component: {fileID: 1258353851616703222}
+  - component: {fileID: 2713025498806319294}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -499,6 +492,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454874453707452908}
   m_Enabled: 0
+--- !u!114 &2713025498806319294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454874453707452908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d11a37e5b6b7c48be1669dffcdff93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1300127578636095788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,6 +620,10 @@ PrefabInstance:
     - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}

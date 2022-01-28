@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: -3211393785996701044}
   - component: {fileID: 7872051621116711042}
   - component: {fileID: 5677078194332730813}
+  - component: {fileID: 664600245383509233}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -321,15 +322,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: V
+  playerEXP: 0
+  playerMovementSpeedPlus: 0
+  playerMovementSpeedMinus: 0
   playerMovementSpeed: 5
   playerAttackSpeed: 0.9
-  playerAttackRange: 1
   playerAttack: 10
   playerDefense: 2
+  IsSlowing: 0
+  CooldownReduction: 0
   playerLuck: 1
   playerHealthPoints: 100
   playerMaxHP: 100
   playerClass: 1
+  playerItems: {fileID: 664600245383509233}
+  items: []
 --- !u!114 &7872051621116711042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +355,10 @@ MonoBehaviour:
   ability_1_cooldown_def: 0
   ability_2_cooldown_def: 0
   ability_3_cooldown_def: 0
+  SpinBTN: {fileID: 0}
+  GoldenSkinBTN: {fileID: 0}
+  ChargeBTN: {fileID: 0}
+  playerStats: {fileID: -3211393785996701044}
 --- !u!114 &5677078194332730813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,3 +371,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8fe116a9b104247baaa94e5d19a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &664600245383509233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6343079516181306867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03860f389f3bf241b2c4d5f81f811da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - index: 0
+    itemName: Runa zdrowia
+    itemImage: {fileID: 8659395192287804456, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza poziom  \u017Cycia."
+  - index: 1
+    itemName: Runa ataku
+    itemImage: {fileID: -8237667901665138252, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza si\u0142\u0119 ataku."
+  - index: 2
+    itemName: Runa ruchu
+    itemImage: {fileID: -5767893256424630917, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza pr\u0119dko\u015B\u0107."
+  - index: 3
+    itemName: Runa spowolnienia
+    itemImage: {fileID: 4775630859605534401, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Ataki spowalniaj\u0105 przeciwnik\xF3w."
+  - index: 4
+    itemName: Runa szalu
+    itemImage: {fileID: -2467140366469486843, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza si\u0142\u0119 ataku i pr\u0119dko\u015B\u0107
+      ruchu. Zmniejsza poziom \u017Cycia."
+  - index: 5
+    itemName: Runa przeznaczenia
+    itemImage: {fileID: 7308664677214642820, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zmniejsza czas odnowienia umiej\u0119tno\u015Bci."
+  - index: 6
+    itemName: Runa obrony
+    itemImage: {fileID: -3283395716511959148, guid: d76dfd57a39a60e4f92779d198fc0394, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza pancerz."
+  - index: 7
+    itemName: Worek wielu rzeczy
+    itemImage: {fileID: 21300000, guid: 2c23c22a48cd3bd49ad4e5f03912827e, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza losow\u0105 statystyk\u0119."
+  - index: 8
+    itemName: "Pier\u015Bcie\u0144 losu"
+    itemImage: {fileID: 21300000, guid: f45969fc848bc174996de7c62a27eade, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza losow\u0105 statystyk\u0119 os\u0142abiaj\u0105c
+      w zamian inn\u0105."
+  - index: 9
+    itemName: "Szcz\u0119\u015Bliwa moneta"
+    itemImage: {fileID: 6088342627132289551, guid: f74b69c274d789b40aa1e96a1169d226, type: 3}
+    isUnlocked: 0
+    isActive: 0
+    itemDescription: "Zwi\u0119ksza szcz\u0119\u015Bcie."

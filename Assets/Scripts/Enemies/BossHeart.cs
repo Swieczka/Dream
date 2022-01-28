@@ -15,13 +15,13 @@ public class BossHeart : EnemyScript
     }
     private void Awake()
     {
+        BossObj = GameObject.FindGameObjectWithTag("Boss");
         IsDead = false;
-        RoomObj = null;
+        RoomObj = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Room>();
     }
 
     private void Start()
-    {
-        BossObj = GameObject.FindGameObjectWithTag("Boss");
+    { 
         if(IsActive)
         {
             BrokenHeart();
@@ -48,6 +48,10 @@ public class BossHeart : EnemyScript
     {
         if (enemyHP > 0)
         {
+            if(x>enemyHP)
+            {
+                x = enemyHP;
+            }
             enemyHP -= x;
             BossObj.GetComponent<BossScript>().enemyHP -= x;
             StartCoroutine(EnemyStatusColor("red", 0.15f));

@@ -22,7 +22,7 @@ public class BossScript : EnemyScript
     private void Start()
     {
         powerShotIndex = Random.Range(3, 6);
-        hpBar = GameObject.FindGameObjectWithTag("BossHPBar");
+        hpBar = GameObject.FindGameObjectWithTag("UI").GetComponent<MainUI>().bosshpbar;
         hpBar.GetComponent<HealthBar>().Player = gameObject;
         hpBar.GetComponent<HealthBar>().isPlayerAssigned = true;
         hpBar.SetActive(false);
@@ -60,23 +60,29 @@ public class BossScript : EnemyScript
                 heart.SetActive(false);
             }
         }
+        StageBonus = PlayerPrefs.GetInt("BossStage", 1);
         enemyMaxHP = enemyHP;
     }
 
     private void Update()
     {
-        if (StageIndex != 0)
+        if (isActive)
         {
-            BossActions();
-        }
-        if (enemyHP <= 0)
-        {
-            BossDeath();
+            if (StageIndex != 0)
+            {
+                BossActions();
+            }
+            if (enemyHP <= 0)
+            {
+                BossDeath();
+            }
         }
     }
 
     void BossDeath()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerStats>().AddEXP(enemyEXP);
         portal.SetActive(true);
         RoomObj.AliveEnemiesInRoom -= 1;
         if (RoomObj.AliveEnemiesInRoom <= 0)
@@ -213,7 +219,10 @@ public class BossScript : EnemyScript
         for (int i = directionindex; i <= 8; i += nextcounter)
         {
             GameObject shootedball = Instantiate(ShootingBall, gameObject.transform);
+            shootedball.GetComponent<SpriteRenderer>().color = Color.black;
+            shootedball.GetComponent<Transform>().localScale.Set(3, 3, 3);
             shootedball.GetComponent<EnemyMushRoomBall>().direction = i;
+            shootedball.GetComponent<EnemyMushRoomBall>().speed = 5;
             shootedball.GetComponent<EnemyMushRoomBall>().ballDamage = 10000;
         }
         anim.ResetTrigger("Attack");
@@ -239,18 +248,21 @@ public class BossScript : EnemyScript
     }
     void SpawnMinions()
     {
-        int index = Random.Range(0, Enemies.Length);
-        int random = Random.Range(0, 2);
-        int randomspawn;
-        if(random ==0)
+        if (RoomObj.AliveEnemiesInRoom < 5)
         {
-            randomspawn = 5;
+            int index = Random.Range(0, Enemies.Length);
+            int random = Random.Range(0, 2);
+            int randomspawn;
+            if (random == 0)
+            {
+                randomspawn = 5;
+            }
+            else
+            {
+                randomspawn = -5;
+            }
+            Vector3 spawnpos = new Vector3(randomspawn, 0, 0);
+            Instantiate(Enemies[index], transform.position + spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
         }
-        else
-        {
-            randomspawn = -5;
-        }
-        Vector3 spawnpos = new Vector3(randomspawn, 0, 0);
-        Instantiate(Enemies[index], transform.position+spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
     }
 }

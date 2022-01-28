@@ -174,10 +174,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 40
-  enemyDamage: 11
+  enemyDamage: 8
+  enemyEXP: 3
+  isActive: 0
+  player: {fileID: 0}
   RoomObj: {fileID: 0}
   cooldoown: 1
   timercooldown: 0
   ball: {fileID: 8561690442719636640, guid: b05c4dcbb9dfcdd49a3988d246326790, type: 3}
+  IsSlowed: 0
   enemyUP: 1
   directionindex: 0

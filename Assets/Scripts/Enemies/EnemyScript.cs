@@ -6,6 +6,11 @@ public class EnemyScript : MonoBehaviour
 {
     public int enemyHP;
     public int enemyDamage;
+    public int enemyEXP;
+    public bool isActive;
+    public int StageBonus;
+    public bool IsSlowed;
+    public GameObject player;
     [SerializeField] protected Room RoomObj;
 
     private void Awake()
@@ -15,9 +20,22 @@ public class EnemyScript : MonoBehaviour
     }
     void Start()
     {
-        
+        StageBonus = PlayerPrefs.GetInt("BossStage", 1);
+        enemyHP += StageBonus * 4;
+        enemyDamage += StageBonus * 2;
     }
-     void Update()
+    private void LateUpdate()
+    {
+        if(RoomObj.ActiveRoom)
+        {
+            isActive = true;
+        }
+        else
+        {
+            isActive = false;
+        }
+    }
+    void Update()
     {
         if (enemyHP <= 0)
         {
@@ -38,6 +56,10 @@ public class EnemyScript : MonoBehaviour
         enemyHP -= x;
         StartCoroutine(EnemyStatusColor("red", 0.15f));
     }
+    public virtual void Slowed()
+    {
+
+    }
     protected IEnumerator EnemyStatusColor(string colorname, float time)
     {
         switch (colorname)
@@ -52,6 +74,8 @@ public class EnemyScript : MonoBehaviour
 
     protected void EnemyDeath()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerStats>().AddEXP(enemyEXP);
             RoomObj.AliveEnemiesInRoom -= 1;
         if (RoomObj.AliveEnemiesInRoom <= 0)
         {

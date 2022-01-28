@@ -31,10 +31,9 @@ public class PlayerStatus : MonoBehaviour
     }
     public IEnumerator PlayerSlow()
     {
-        float speed = gameObject.GetComponent<PlayerStats>().playerStartSpeed;
-        gameObject.GetComponent<PlayerStats>().playerMovementSpeed *= 0.5f;
+        gameObject.GetComponent<PlayerStats>().playerMovementSpeedMinus += 2;
         yield return new WaitForSeconds(2);
-        gameObject.GetComponent<PlayerStats>().playerMovementSpeed = speed;
+        gameObject.GetComponent<PlayerStats>().playerMovementSpeedMinus -= 2;
     }
 
     IEnumerator PlayerStatusColor (string colorname, float time)

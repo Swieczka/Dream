@@ -163,7 +163,7 @@ MonoBehaviour:
   - {fileID: 1953530289305017829, guid: 83a4be650e694744281a29e7f22a404f, type: 3}
   - {fileID: 1953530289305017829, guid: 058cccbb3b24ae349a791c1f56a5f199, type: 3}
   RoomsSpecial:
-  - {fileID: 1953530289305017829, guid: 612a60c8646f47d48a125ec89b5b1577, type: 3}
+  - {fileID: 1953530289305017829, guid: 4701a197da52a0c46917dc9cae8d438d, type: 3}
   - {fileID: 1953530289305017829, guid: bb76d44b9f0030649b581ee5a6b2aaa2, type: 3}
   - {fileID: 1953530289305017829, guid: 65cd80001fc36b54292988d9639e0c08, type: 3}
   roomType: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   RoomCamera: {fileID: 8454874453707452908}
   ActiveRoom: 0
   IsRoomFinished: 0
+  IsRoomActive: 0
   DoorPositions:
   - {fileID: 2951685238824188666}
   - {fileID: 5322878622504414412}
@@ -435,6 +436,7 @@ GameObject:
   - component: {fileID: 3921813012696394200}
   - component: {fileID: 5887566880371377065}
   - component: {fileID: 1258353851616703222}
+  - component: {fileID: 8320374335183776110}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -507,6 +509,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454874453707452908}
   m_Enabled: 0
+--- !u!114 &8320374335183776110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454874453707452908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d11a37e5b6b7c48be1669dffcdff93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7201111926113562783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193555431032406540, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 972d24bdd5ae21a47a94994970ad235a, type: 3}
