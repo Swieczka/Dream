@@ -1,33 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Vision : MonoBehaviour
 {
     public MenuManager menumanager;
     public bool CanChangeScene;
+    public GameObject DialogBox;
+    public TextMeshProUGUI DialogBoxText;
+    [TextArea]
+    public string[] Dialouges;
+    public int DialoguesLength;
+    public int nextSceneIndex;
     void Start()
     {
+        DialoguesLength = Dialouges.Length;
+        DialogBox.SetActive(false);
         CanChangeScene = false;
-        StartCoroutine(VisionTimer(5f));
-        
+        StartCoroutine(VisionTimer(3f));
+        StartCoroutine(VisionDialogue(3f));
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && CanChangeScene)
-        {
-            menumanager.NextScene();
-        }
     }
 
-
+    IEnumerator VisionDialogue(float time)
+    {
+        for(int i=0;i<DialoguesLength;i++)
+        {
+            yield return new WaitForSeconds(time);
+            DialogBoxText.text = Dialouges[i];
+        }
+        yield return new WaitForSeconds(time);
+        menumanager.ChangeScene(nextSceneIndex);
+    }
 
     IEnumerator VisionTimer(float time)
     {
-        Debug.Log("aa");
         yield return new WaitForSeconds(time);
-        Debug.Log("bbb");
-        CanChangeScene = true;
+        DialogBox.SetActive(true);
     }
 }

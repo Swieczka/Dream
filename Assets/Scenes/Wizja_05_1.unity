@@ -633,14 +633,9 @@ MonoBehaviour:
   DialogBox: {fileID: 1565637395}
   DialogBoxText: {fileID: 9159896}
   Dialouges:
-  - "???: Przykro mi\u2026"
-  - 
-  - "- Mamo\u2026 (cichy p\u0142acz)"
-  - "\u2026"
-  - "???: Wiesz\u2026 je\u015Bli chcesz mo\u017Cesz i\u015B\u0107 za ni\u0105."
-  - "-O czym Ty m\xF3wisz?"
+  - "???: Skoro takie by\u0142o Twoje \u017Cyczenie\u2026\r"
   DialoguesLength: 0
-  nextSceneIndex: 9
+  nextSceneIndex: 13
 --- !u!1 &1471749202
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: fba8954ec45e66e4982f32066ddec917, type: 3}
+  m_Texture: {fileID: 2800000, guid: 77d44c1e7840e4441b2d0881a55d9232, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
