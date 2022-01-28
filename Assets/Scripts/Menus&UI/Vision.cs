@@ -5,6 +5,7 @@ using TMPro;
 
 public class Vision : MonoBehaviour
 {
+    public bool ChangeScene;
     public MenuManager menumanager;
     public bool CanChangeScene;
     public GameObject DialogBox;
@@ -16,7 +17,7 @@ public class Vision : MonoBehaviour
     void Start()
     {
         DialoguesLength = Dialouges.Length;
-        DialogBox.SetActive(false);
+       DialogBox.SetActive(false);
         CanChangeScene = false;
         StartCoroutine(VisionTimer(3f));
         StartCoroutine(VisionDialogue(3f));
@@ -34,7 +35,15 @@ public class Vision : MonoBehaviour
             DialogBoxText.text = Dialouges[i];
         }
         yield return new WaitForSeconds(time);
-        menumanager.ChangeScene(nextSceneIndex);
+        if (!ChangeScene)
+        {
+            menumanager.ChangeScene(nextSceneIndex);
+        }
+        else if(ChangeScene)
+        {
+            yield return new WaitForSeconds(time);
+            DialogBox.SetActive(false);
+        }
     }
 
     IEnumerator VisionTimer(float time)

@@ -35,7 +35,7 @@ public class DungeonSpawn : MonoBehaviour
             Destroy(Room);
         } 
         
-        ClearLog();
+        
     }
 
 
@@ -253,13 +253,7 @@ public class DungeonSpawn : MonoBehaviour
         #endregion
     }
 
-    public void ClearLog()
-    {
-        var assembly = Assembly.GetAssembly(typeof(UnityEditor.Editor));
-        var type = assembly.GetType("UnityEditor.LogEntries");
-        var method = type.GetMethod("Clear");
-        method.Invoke(new object(), null);
-    }
+
 
     public void DistanceFromSpawnLeft(int x, int y, int distance)
     {
