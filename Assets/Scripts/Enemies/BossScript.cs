@@ -248,21 +248,25 @@ public class BossScript : EnemyScript
     }
     void SpawnMinions()
     {
-        if (RoomObj.AliveEnemiesInRoom < 5)
+        if (RoomObj.AliveEnemiesInRoom < 2)
         {
-            int index = Random.Range(0, Enemies.Length);
-            int random = Random.Range(0, 2);
-            int randomspawn;
-            if (random == 0)
+            int random = Random.Range(2, 5);
+            Vector3 spawnpos = new Vector3(-5, 0, 0);
+            Instantiate(Enemies[Random.Range(2,4)], transform.position + spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
+            Instantiate(Enemies[Random.Range(2, 4)], transform.position - spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
+            for(int i=0;i<=random;i++)
             {
-                randomspawn = 5;
+                int rand = Random.Range(0, 2);
+                switch(rand)
+                {
+                    case 0:
+                        Instantiate(Enemies[Random.Range(0, 2)], transform.position + spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
+                        break;
+                    case 1:
+                        Instantiate(Enemies[Random.Range(0, 2)], transform.position - spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
+                        break;
+                }
             }
-            else
-            {
-                randomspawn = -5;
-            }
-            Vector3 spawnpos = new Vector3(randomspawn, 0, 0);
-            Instantiate(Enemies[index], transform.position + spawnpos, Quaternion.identity, gameObject.transform.parent.transform);
         }
     }
 }

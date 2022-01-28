@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Wizja_01.unity
+    guid: 362cee9ac8807e145a908d81a584927b
+  - enabled: 1
     path: Assets/Scenes/Level_2.unity
     guid: 892b2fe67cc30424f92d2605e3b7b91b
   - enabled: 1

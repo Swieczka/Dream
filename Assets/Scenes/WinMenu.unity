@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1471749203}
     m_Modifications:
+    - target: {fileID: 4403867952379222332, guid: 3944b1a0cf5a07a4196779d95eb6dfbc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1146450713}
+    - target: {fileID: 4403867952379222332, guid: 3944b1a0cf5a07a4196779d95eb6dfbc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
     - target: {fileID: 4403867952379222333, guid: 3944b1a0cf5a07a4196779d95eb6dfbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -389,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e45e7b717065a479989df86da4a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
+  main: {fileID: 1471749202}
 --- !u!114 &1146450714
 MonoBehaviour:
   m_ObjectHideFlags: 0

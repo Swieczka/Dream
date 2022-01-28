@@ -144,6 +144,8 @@ MonoBehaviour:
   enemyDamage: 0
   enemyEXP: 25
   isActive: 0
+  StageBonus: 0
+  IsSlowed: 0
   player: {fileID: 0}
   RoomObj: {fileID: 0}
   StageIndex: 0
@@ -164,6 +166,7 @@ MonoBehaviour:
   - {fileID: 7887068567400424926, guid: 4b07222b7c69b4f43b35d85b97e604af, type: 3}
   - {fileID: 7887068567400424926, guid: 5928878f9894f3149b8bc9b91b1b60c0, type: 3}
   - {fileID: 222909841745300679, guid: e3a41ceb89b52e546a66445efe216af9, type: 3}
+  - {fileID: 222909841745300679, guid: d1a5ce32eb8f6614c9199764206d0f9a, type: 3}
   cooldoown: 1
   timercooldown: 0
   anim: {fileID: 0}
